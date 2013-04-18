@@ -1,0 +1,6 @@
+编译步骤：
+cd patchrom
+. build/envsetup.sh
+cd i9000
+make fullota
+编译完成后，打开i9000/out/fullota.zip，删除META-INF，把i9000/other/boot里的文件放入fullota.zip根目录即可，I9000的MIUIV4.1卡刷包即制作完成。

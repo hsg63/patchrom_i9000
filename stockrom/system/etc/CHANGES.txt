@@ -1,0 +1,2655 @@
+===================================
+Since Tue Aug 28 23:01:21 UTC 2012
+===================================
+
+   * android
+acdb4b1 Update for stable branch
+3100b68 QCom headers for optimized v8
+d48f43b Add CMFileManager
+259d8c3 Enable "sync -c" default for repo
+303ad92 Add the OTA updater
+d228c80 Add htop, powertop, and lsof
+6831129 Add Superuser repo
+bfa7083 Of course we still need the Darwin toolchain.
+f8f1cb6 Underp manifest
+60f3908 Switching all prebuilts to AOSP
+
+   * bionic
+c24859f Merge "Fix <sys/klog.h> to correspond to the kernel operations." into jellybean
+2569f04 Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/bionic into aosp-merge
+079b2a5 Fix <sys/klog.h> to correspond to the kernel operations.
+17e6c69 Merge branch 'jb-release' of https://android.googlesource.com/platform/bionic into aosp
+c49e6f2 Revert "Upgrade to dlmalloc 2.8.5."
+5037b10 Upgrade to dlmalloc 2.8.5.
+41b3813 msm8660: Add neon based pow() function for Scorpion
+8477551 Bionic/libm: Pow optimizations and bug fixes
+e5b564f msm7627a: Enable neon optimized memove and pow functions.
+7183f48 Bionic/libm: Remove extra vmov from sin/cos
+72705b9 Bionic/libm: add assembly versions of sin/cos
+cbe8bcc Bionic/libm: Prefer branches and VFP ABI
+2e77f93 linker: Increase maximum shared libraries loaded to 192
+4dfd4f2 bionic: Stack pointer/signal race condition.
+
+   * bootable/recovery
+65777cd Merge "recovery: fix build on x86" into jellybean
+0d56a0e recovery: fix build on x86
+bd6dece Allow custom RECOVERY_NAME
+8929c1e Revert "move "install zip from sideload" to installation submenu"
+2b62203 move "install zip from sideload" to installation submenu
+58cd3b9 6.0.1.5
+35ced47 mtdutils: fix crash on large erase block
+c9d07dc touch up the pictures, remove the leftover
+702a3b3 Merge "recovery : add minadbd and sideload from AOSP" into jellybean
+fa118f3 Merge "recovery: make dedupe gc interruptable" into jellybean
+368b375 recovery : add minadbd and sideload from AOSP
+470e3cd fix lack of null termination being written to the lun file
+c4f037d rev
+f2872b9 6.0.1.3
+
+   * build
+f8ec78a omnom (brunch + eat) command
+553affa Fix SmokeTest
+3ff13a1 build: Add "installrecovery" command
+6fceb2a fix sdk target with absolute OUT_DIR
+8575026 unpackbootimg: add a target specifically for unpackbootimg. for some reason, and I am guessing this is a bug in the Android build, I can no longer run the following: make -j32 out/host/darwin-x86/bin/unpackbootimg
+8bce8c0 Remove duplicate src:dest pairs in PRODUCT_COPY_FILES
+16bde1f Split to multiple bash commands.
+8aaf0aa Revert "build: Use newline at the end of echo to apkcerts file"
+54f011a cleanbuild: add *.zip.md5sum to installclean_files
+700a87f dopush: improvements
+933d561 Run clean steps in only given paths when using mm/mmm
+4fce921 recoveryzip: Fix build of recoveryzip
+07b89fe roomservice: Handle missing netrc file
+5882505 roomservice: Add support for netrc
+d2c281b Merge "Build only modules required by the current product." into jellybean
+9596c1c roomservice: Bump github request per_page to 100
+7f55416 Build only modules required by the current product.
+cd5ea04 build-with-colors: moar colors
+99430f7 build: Use newline at the end of echo to apkcerts file
+2eb4ca0 core/Makefile: avoid exceeding MAX_ARG_STRLEN
+747461c Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/build into aosp-merge
+9f246de build: work around missing readlink -f on Mac
+0d88e5b Merge "envsetup: set OUT_DIR to an absolute path always" into jellybean
+25454bc JZO54K
+0d6a91e JZO54J
+eb74c2f envsetup: new function cmka
+21439c9 envsetup: set OUT_DIR to an absolute path always
+6d8b06f Fix building when OUT_DIR is out of ANDROID_BUILD_TOP
+5e703b2 build: Don't build the recovery-from-boot patch on CM
+ba7bed7 JZO54I
+2a7db05 Merge "Add CM copyright to some files." into jellybean
+a0bb428 envsetup: make-and-push function enhancements
+b27e328 Merge branch 'jb-release' of https://android.googlesource.com/platform/build into aosp
+cedd76f build: Add "installboot" command to install boot images
+b097af8 JZO54H
+e816bde build: Pass OTAPACKAGE location to squisher
+d3e35c7 Add CM copyright to some files.
+4b04330 build: Add "aospremote" command
+86da340 Merge "envsetup.sh: Fix the `reposync` function" into jellybean
+112ae68 Merge "build: Remove wallpapers from full_base." into jellybean
+374cfb9 Add standard method for enabling mfpu and mcpu code optimization
+a5b7347 JZO54G
+e859020 JZO54F
+bad31ff envsetup.sh: Fix the `reposync` function
+dbf1b57 JZO54E
+b48ada9 build: Remove wallpapers from full_base.
+ab157ed Eat: Option to specify directory of zip in recovery mode
+f33d47b JZO54D
+3c47c4e JZO54C
+ef6f4f6 Add make_ext4fs to all builds
+bdfc1bb JZO54B
+55e4dd5 Add naver fonts to build target.
+
+   * cts
+68d4d45 Merge branch 'jb-release' of https://android.googlesource.com/platform/cts into aosp
+
+   * dalvik
+746918a Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/dalvik into aosp-merge
+c263618 Fix an ugly bug where try/catch offsets weren't being mapped properly.
+d379e9c Merge branch 'jb-release' of https://android.googlesource.com/platform/dalvik into aosp
+8e1633b Revert "Upgrade to dlmalloc 2.8.5."
+74ccce2 Optimize those StrictMath routines that are identical to Math routines.
+d87884d Trim pre-Zygote fork, fix under-estimate of heap limit.
+9cee921 Upgrade to dlmalloc 2.8.5.
+19fc686 dalvik: update ARMv6 code to bring in line with ARMv5
+7a9db25 Support debug info in dexmerge and fix max blowup of annotations
+
+   * development
+d569bc4 Eclipse-Classpath
+cfda628 Fixed: Eclipse-Classpath
+a3d4aff Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/development into aosp-merge
+701ac38 Merge "Added Russian Translation-DevTools-CM10" into jellybean
+c3abec5 CMUpdater : Add to classpath
+c83d035 Added Russian Translation-DevTools-CM10
+32b56a6 Dev Tools: Mock SMS
+0b0f7f8 Merge branch 'jb-release' of https://android.googlesource.com/platform/development into aosp
+aba4384 Fixes Eclipse ClassPath for new AIDL-Interface in DeskClock
+
+   * device/samsung/aries-common
+977d74b GalaxyS-settings: improved Dutch translations
+f3fb7a1 AriesParts: use sane default values for microphone gain
+e92519a aries-common: Disable bugreport
+a15df94 AriesParts: updated romanian translation
+161d9c0 aries-common: enable expanded desktop
+d794320 aries: Remove Wi-Fi direct
+858bc8d Update Russian Translation-Galaxy S Settings-CM10
+b0c3fa0 AriesParts: add "test" button to vibration controls
+4740ded libcamera: allow changing of ISO modes
+a0e8c13 AriesParts: Fixed 2 typos in Danish and original strings.xml
+4d3c5e7 AriesParts: Danish missing strings and revision of existing ones
+5fc6c41 AriesParts: add vibration intensity settings
+cf58673 recovery: mount external sd as /external_sd
+3e14e63 Merge "aries-common: allow suspend in charger" into jellybean
+f5e96c9 aries-common: allow suspend in charger
+e3936f5 use logical volumes for system and data, bring back datadata
+5e3a901 Merge "aries-common: Add power HAL" into jellybean
+b266881 aries-common: Add power HAL
+f2017f5 Merge "PT-BR: Added missing translations" into jellybean
+273faeb Merge "aries-common: Use open-source charger" into jellybean
+009c7cc PT-BR: Added missing translations
+baacae7 Revert "aries-common: increase read-ahead on moviNAND"
+7eda9b7 aries-common: Use open-source charger
+f237154 aries-common: enable custom vsync ioctl
+fc0deb7 Merge "libcamera: Fix initial flash mode in camera HAL" into jellybean
+b661312 libcamera: Fix initial flash mode in camera HAL
+00a0bbf Device aries-common: Spanish translations
+6e19152 aries-common: Mark encryption has unsupported
+786847b aries-common: Re-enable Samsung STK
+
+   * device/samsung/galaxysmtd
+6f5d2ab galaxysmtd: use aries-common recovery.fstab
+
+   * docs/source.android.com
+2517cff Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/docs/source.android.com into aosp-merge
+
+   * external/aac
+49fa877 libFDK in libaac: Add conditional definition to switch arm asm for devices that don't support thumb2. Tested on heroc with armv6j.
+
+   * external/bluetooth/bluez
+2a3e0ac Bluetooth: Making 48K as the default sampling rate for SBC encoding.
+064dbab Ported: Bluetooth Message Access Profile (MAP) from CM9
+
+   * external/busybox
+48daa65 android ndk defconfig: fix default location of modules
+8ea3bb9 Revert "dd: support skip and seek values greater than 2G on android"
+
+   * external/chromium
+5fbe95a net: networking optimizations
+
+   * external/dnsmasq
+c3a70a9 fix memory leaking
+
+   * external/freetype
+4d3876e freetype: Add Infinality patches
+8bef833 Upgrade FreeType to 2.4.10
+
+   * external/htop
+e1a8535 Fix the build on CM
+
+   * external/icu4c
+97f4763 ucnv: Add ICS symbols for back-compat
+
+   * external/jhead
+2b64e33 Fixes exif corruption issues in jhead.
+53dee91 Handle locations with more than 30 chars for lat/lon.
+
+   * external/libncurses
+565e8f2 Compiliation fixes
+
+   * external/libnfc-nxp
+5199e59 Merge "On some handsets, there is a configuration of hardware that causes a conflict with HCE.  Primarily it is something in the SWP configuration with a SWP sim card.  It appears to be a PN544 register setting that blocks HCE type A only from initialization.  This patch checks for this conflict and disables HCE for those configurations.  The better way would be to understand how to set the PN544 registers to unblock the conflict, but this is a sufficient work around for this minority of configurations" into jellybean
+aac6c7f On some handsets, there is a configuration of hardware that causes a conflict with HCE.  Primarily it is something in the SWP configuration with a SWP sim card.  It appears to be a PN544 register setting that blocks HCE type A only from initialization.  This patch checks for this conflict and disables HCE for those configurations.  The better way would be to understand how to set the PN544 registers to unblock the conflict, but this is a sufficient work around for this minority of configurations
+ebad753 Merge "card emulation patch port to JB" into jellybean
+
+   * external/libxml2
+f63137b Changes to also make .so for libxml2
+
+   * external/lsof
+c361873 Build lsof in xbin
+cc9b3c9 Fix the build
+
+   * external/naver-fonts
+9db1651 Add naver fonts to empty naver-fonts repo.
+
+   * external/nist-sip
+cff6e22 SIPTransactionStack: Map.contains(key) was used instead of Map.containsValue(value)
+2d42e31 NullPointerException in HeaderIterator
+
+   * external/openvpn
+23e554d Revert "unmask SIGCHILD so waitpid won't return -ECHILD"
+67b8d46 unmask SIGCHILD so waitpid won't return -ECHILD
+
+   * external/powertop
+06f845a Fix the build on CM
+
+   * external/skia
+4979366 Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/external/skia into aosp-merge
+6ab8707 skia: Several tunings
+ef9e72c Squashed commit of font rendering fixes from Skia master
+0a58de2 Landing arm patch from contributor.
+9f378eb Implementing Color32 functions for Neon platforms.
+
+   * external/webkit
+59ed57e Performance enhancement.  Don't process non-visible lines for layout.
+affccf1 avoid memcpy in cpu-upload
+3571c05 external/webkit: check element object for NULL
+8f1d3fb [WebKit] Add board specific configuration to enable/disable PLD DOM traversal optimization
+287b9de [WebKit] Browsermark DomAdvSearch and DomSearch optimizations
+caaf046 Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/external/webkit into aosp-merge
+c870460 WebGL implementation for Android
+0148f24 DOM traversal optimizations DOM Core optimizations Prefetch optimization for DOM Tree Traversal
+b1d0c26 webkit: networking optimizations
+bec116a webkit: HTML5 video user experience and stability fixes
+8de5593 webkit: Multimedia feature port from ICS
+972a646 Implement requestAnimationFrame
+87bbfb2 Remove inconsistency between HistoryItem writing/reading
+5bb409a Crash on Orange media portal
+f159da4 Fix memory leak caused by CSSRuleList wrapper
+b758061 Fix browser rendering issue: pure color tiles are rendered black
+
+   * external/wpa_supplicant_6
+fe36dc5 Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/external/wpa_supplicant_6 into aosp-merge
+2716d65 Merge branch 'jb-release' of https://android.googlesource.com/platform/external/wpa_supplicant_6 into aosp
+
+   * external/wpa_supplicant_8
+147eaf3 Ifdef the previous changes for compatibility with older drivers.
+fd34f9a Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/external/wpa_supplicant_8 into aosp-merge
+e488da3 Fix 'restore STA reconnection behavior' cherry-pick
+6b24b49 Restore STA reconnection behavior
+
+   * external/zlib
+c7b5f21 zlib: revert x86/adler32.c to b42095f4f1
+be282a7 zlib: Update to version on adler32/slhash repo as of Aug 13, 2012
+
+   * frameworks/av
+e3b7ab2 Merge "libstagefright: Unbreak OMAP4 encoders" into jellybean
+7e3d436 libstagefright: Unbreak OMAP4 encoders
+18c71ec Add KEY_SUPPORTED_CAF and KEY_CAF camera parameters
+6bd12b9 Frameworks/av: Fix for mediaserver crash in AudioFlinger
+4968f0d audioflinger: Initialize effectspool buffer size during allocation
+fed033c libstagefright: Detect defers-output-buffer-allocation quirk
+403be8e libstagefright: Add support for TCXO shutdown
+a0723cd libstagefright: Deregister audio flinger client during LPA session close
+ce58e0f libstagefright: Avoid flush if LPA playback is not routed
+82416cc libstagefright: Fix for crash during lpa playback
+008cac6 libstagefright: Add flush in reset during LPA playback
+c7e4a1e libstagefright: Increase LPA buffer size to 512 MB and reduce buffer count to 2
+feba953 audioflinger: Properly initialize bytesToWrite for LPA effects
+e90259b audio: Fix mismerges
+41d3814 Revert "libstagefright: Fix for clips getting skipped during playback"
+1cf9aee libstagefright: reset flag to allow buffering
+5859d60 libstagefright: avoid audio source to start before audio player after seek
+9457372 camera: add define for ISO settings
+6cbd2f6 Fix typo in codecHasQuirk
+3519f0d libstagefright: Add support for the 720P OMAP3 encoders
+787bc87 Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/frameworks/av into aosp-merge
+07eb95a libaudioflinger: fix crash in LPA effects due to multiple tracks
+c19dc78 libmedia: Fix for LPA audio loss issue
+11df26c libstagefright: Fix for clips getting skipped during playback
+1e59905 libmedia: Fix build on non qcom hardware.
+a8509d3 Merge "audioflinger: Add support for post proc effects in Direct Track" into jellybean
+77a17ff Merge "frameworks/av: Syncronize resume and onPauseTimeOut" into jellybean
+576e29d audioflinger: Add support for post proc effects in Direct Track
+2cb834f frameworks/av: Syncronize resume and onPauseTimeOut
+c0eae9f Merge "CameraService: Disable capture message types before stopping preview" into jellybean
+333bc44 Merge "Add CAMERA_MSG_RAW_BURST handling to CameraService" into jellybean
+0844fc5 Merge "CameraService: Adds support for burst compressed images" into jellybean
+85d647c CameraService: Disable capture message types before stopping preview
+27006f2 Add CAMERA_MSG_RAW_BURST handling to CameraService
+aa94479 CameraService: Adds support for burst compressed images
+69a4fb1 Merge branch 'jb-release' of https://android.googlesource.com/platform/frameworks/av into aosp
+8512658 stagefright: OMXCodec: Re-enable OMX.TI.Video.encoder's quirks
+7204c37 camera: added weather key for samsung cameras
+bbe0d4d CameraService: Add compatibility for OMAP ICS blobs
+92cd768 Camera Service: Change max number of cameras to 3
+a295e5a libmedia: Add ICS audiotrack constructor
+90592b3 libstagefright: Fix for LPA playback not resuming after pause
+d122128 framework/av: port change for vocoders support
+ebb533c libstagefright: LPA: Fix for delay in stopping LPA playback
+0b05207 Merge "AudioFlinger: Fix compile with enabled debug flag." into jellybean
+4f39925 AudioFlinger: Fix compile with enabled debug flag.
+3461ca6 camera: allow proper preview window updates to be disabled
+3ba8a0c libstagefright: TCXO shutdown support and Misc fixes for LPA
+966e97c libstagefright: LPA playback fails when non-LPA clip is next clip
+89de935 libstagefright: Fix for failure in LPA clip playback
+807be08 libstagefright: Fix for media server crash when seeking during pause
+c0792bb libstagefright: support for disabling buffer metadata
+2063671 frameworks/av: Set key mimetype for audio only ASF and 3gp clips
+f24c853 framework/av: Fix in MP4 extractor to avoid crash while parsing fuzzed clips.
+3c797a9 framework/av:: Add support to decode mp3 data in mp4 container
+c3a4309 libstagefright: Disable multi-slicing in mpeg4 video recording.
+377e846 frameworks/av: Fix NULL Pointer exception issue
+d878663 framework/av: Fix to handle corrupted .m4a clips
+2adb3fd libstagefright: Checks before freeing buffers on a port
+5087233 frameworks/av: Fix for video playback failure in browser
+d7d74e7 libstagefright: Reduce number of video events posted when frame is early
+ada2874 frameworks/av : Added key to query a2dp device support
+d20c202 libstagefright: Fix for FPS drop issue during A-V playback.
+1eb6aca libstagefright: Fix for CTS recording testcase failure
+2442079 libstagefright: Fix for data loss in qcp recording
+c504b70 frameworks/av: Fix ANR during voice call recording when call ends
+c886e50 libstagefright: Enable encode and decode with composition offsets
+2a2277c Cameera: Correct camera orientation for front sensor
+ea112e3 libstagefright: Fix for LPA crash and timestamp issue
+6c75eac libstagefright: Enable LPA playback on BT-A2DP devices.
+56828e8 audoflinger: Add A2DP Notifications.
+9764326 framework/av: Fix AudioFlinger create track failure
+42cf1d6 Merge "i9300: Enable back forgotten ISO modes (1/2)" into jellybean
+a1b8217 camera: Full support for HTC camera switch
+79069d1 i9300: Enable back forgotten ISO modes (1/2)
+bff0139 Revert "camera: Set the min undequeued buffer count to 2 for camera"
+3f54940 fixup for non QCOM targets
+563410d CameraParameters: Underp non-qcom hardware
+f2079bc Merge "libstagefright: Enable suspension policy" into jellybean
+97cb286 Merge "camera: add missing symbols for HTC 8660 camera HAL" into jellybean
+a291e0f Merge "camera: remove redundant QCOM_HARDWARE ifdefs" into jellybean
+96e80de libstagefright: Enable suspension policy
+deb497b AudioFlinger: Disable AUDIO_WATCHDOG to reduce high audio power
+6149dce camera: add missing symbols for HTC 8660 camera HAL
+e5ea2ff camera: remove redundant QCOM_HARDWARE ifdefs
+500f2b3 AudioFlinger: mOutput->stream->get_latency must be inside mLock scope
+0c67855 Merge "libstagefright: Pass aligned width to color convert routine" into jellybean
+063eee2 libstagefright: Pass aligned width to color convert routine
+031c2d4 libstagefright: Fix crash during next clip playback
+f2ce0fe audioflinger:  Avoid deadlock for sound recording - LPA concurrency.
+29fa8b7 frameworks/av: Use software decoders for LPA clips
+
+   * frameworks/base
+2a572ee Fix home/menu unlock with longpress hardware key actions
+d4eacbe Fix memory leak in SettingsObserver. The observer holds closed activities alive because it registered to ContentResolver.
+ccdaa4e Frameworks/base: Correct Simplified Chinese Translations
+8e005bf Framework: Fix Profiles Insecure lock screen not working
+1a599e8 Mms auto-retrieval (1/2): framework
+749ded0 Merge "PT-BR: Added missing translations" into jellybean
+4b732cd AudioService: Don't adjust volume when vol-downing to vibrate or silent
+36263bd PT-BR: Added missing translations
+9f3ee9f Stylus gestures features (1/2)
+1629d81 Add French translations for expanded desktop
+09d16ef German: Update translation
+10c2358 UMS support with any volume, not only primary (2/3)
+dd5025d Prevent Sym key from showing the IME picker
+37307e6 Update Russian Translation-Weather status-CM10
+9999edf Merge "Revert "Framework: Fixes mms automatic retrieval (2/2)"" into jellybean
+7cfd18a Revert "Framework: Fixes mms automatic retrieval (2/2)"
+98f22ee Merge "Framework: Fixes mms automatic retrieval (2/2)" into jellybean
+f787a63 Merge "QualcommSharedRIL:  Bypass CDMA subscription in handler switch to avoid crashing of telephony stack." into jellybean
+a675663 Update Russian Translation - Lockscreen weather - CM10
+097fd55 QualcommSharedRIL:  Bypass CDMA subscription in handler switch to avoid crashing of telephony stack.
+a56c382 Merge "core and telephony: Additional HSPAP support" into jellybean
+1c4bd2b Merge "frameworks: Dutch translations" into jellybean
+db72230 Merge "frameworks_base: Added missing danish translations" into jellybean
+f414f5d Default device volumes not initialised
+35dfa1f Merge "Provide haptic feedback on long pressing keys in lockscreen." into jellybean
+8dc79c4 frameworks: Dutch translations
+9106ac7 Merge "Added hungarian translation for expand desktop settings" into jellybean
+600bf6a Provide haptic feedback on long pressing keys in lockscreen.
+a24d20f Merge "es_ES: Added missing translations" into jellybean
+e6ef5b8 Framework: Fixes mms automatic retrieval (2/2)
+2447cca SystemUI: fix battery percentage on tablet
+1ea28f1 LockScreen: allow long-press actions from hardware keys (1/2)
+611462a frameworks/base: Romanian translation for Expanded desktop
+619019f Added hungarian translation for expand desktop settings
+fd720e5 Merge "framework-res: Simplified Chinese translations" into jellybean
+831bee4 Merge "Update Russian Translation-Expanded desktop-CM10" into jellybean
+eb3e5f5 Merge "framework/base: add translation for Recovery" into jellybean
+80663c4 Update Russian Translation-Expanded desktop-CM10
+9c7ff48 framework-res: Simplified Chinese translations
+7c08ae5 Merge "Navbar : Rework logic for determining orientation" into jellybean
+3c6dbc3 Update Russian Translation-Expanded desktop-CM10
+5beddd4 es_ES: Added missing translations
+91623ec frameworks_base: Added missing danish translations
+d81a494 Expanded desktop capability (2/2)
+c63ab11 Navbar : Rework logic for determining orientation
+d0c5462 Merge "Restore correct volumes when headset is plugged" into jellybean
+7b8002a frameworks/base: Fix for UI freeze issue with headset insert/removal
+1b025fd PhoneWindowManager: Release wakelock after headset detection.
+e4cfb74 frameworks/base: Fix for headset switch detect
+59e23c1 EventHub: Modify the keyboard layout file name for headset button
+12aade4 frameworks/base: Add support for wired headset detection
+87eefec Restore correct volumes when headset is plugged
+9c4942e Merge "LocationManagerService: The "value" was used as a Map.remove(key) method parameter." into jellybean
+fb4261a Merge "CircleBattery: Revamped charging animation" into jellybean
+f0da0bf Merge "SQLiteSession: Use hasNestedException() method instead of direct check" into jellybean
+073c3f0 Merge "Copy-Paste bug in IconUtilities" into jellybean
+a3d1292 Merge "Possible NPE in RuimRecords" into jellybean
+b3afcac Merge "Possible NPE in ChooseAccountTypeActivity" into jellybean
+2c83ad0 Merge "Possible NPE in ActivityManagerService" into jellybean
+39e46ce SQLiteSession: Use hasNestedException() method instead of direct check
+fa7a778 LocationManagerService: The "value" was used as a Map.remove(key) method parameter.
+9410cd7 Copy-Paste bug in IconUtilities
+b536d36 Possible NPE in RuimRecords
+c0c8969 Possible NPE in ActivityManagerService
+46e5aba Possible NPE in ChooseAccountTypeActivity
+5e2117d CircleBattery: Revamped charging animation
+c76c1ec frameworks: add dock battery drawables for HDPI devices
+3202537 Merge "Add SET_ALARM permission for SystemUI" into jellybean
+9a48bf8 framework/base: add translation for Recovery
+a864379 fix a misspelling / typo.
+d70d0b5 Add SET_ALARM permission for SystemUI
+296e1f4 Merge changes I292a2905,I99851de0 into jellybean
+456e1a6 NullPointerException in UsbStorageActivity and SQLiteSession
+338d39b Call to equals() comparing different types
+ca21974 Merge "Bugfix: Dock events can have state greater than 1" into jellybean
+6855c96 Allow airplane and silent power toggle (2/2)
+56c014f SECURITY remove lock pattern from being logged
+d3d85cb Merge "SettingsProvider: Revert default WiFi sleep policy to "never"" into jellybean
+9a64b90 Merge "framework: Add home button unlock option (1/2)" into jellybean
+2f90e9d framework: Add home button unlock option (1/2)
+a5b595a Merge "LocationManagerService: Respect the type of NetworkInfo that was passed" into jellybean
+a8156d1 Fixed a typo in error message
+cb81f19 Add onLongClick action to notication clock and date
+5d5d6ab SettingsProvider: Revert default WiFi sleep policy to "never"
+8f931a2 LocationManagerService: Respect the type of NetworkInfo that was passed
+c6df362 Add onClick action to notification clock and date
+8322f1e CatService: fix typo
+a1dd3f8 Bugfix: Dock events can have state greater than 1
+55c992b core and telephony: Additional HSPAP support
+bc5b61d Add CmCircleBattery to StatusBar options (1/2)
+2c79d53 Merge "Framework: Option to not lock automatically when a call ends (1/2)" into jellybean
+95b6f5b NotificationPowerWidget : Snap widgets
+b29bea8 Accurately display connectivity info in tablet status bar
+1af21b8 LockscreenShortcuts : Fix minor bugs
+6ef004e DockAudio: Always route audio back to normal on undock.
+6536e02 telephony: let us write just the aid on getIMSIForApp
+287ecc1 Frameworks_base: Simplified Chinese translations
+fca6bdc Move voip/java/com/android/server/sip to framework2.jar
+b1b14cb Support GSM AT commands for SMS over bluetooth (1/2)
+de313e2 ActionBar: Compute required items prior to optional items
+046a16c Postpone sending scroll message to webcore thread
+2bd07c1 Change the thread priority
+0e444d3 Framework: Option to not lock automatically when a call ends (1/2)
+d14db20 systemui: Restore original status bar date view spacing
+f413b60 framework/base: fixed romanian translation
+7f86cbf Framework: Added czech translations
+d949abe SystemUI: Added czech translations
+331c104 * Only do a cancel discovery if the device is discovering. * explicitly close input and outputstream. This could prevent objects from being cleaned up before   the next connect attempt.
+e91a237 Services: Fix for dock audio routing
+b946849 Added hungarian translation for sendMockSms settings
+9fb43d8 systemui: Fix layout after conversion to LinearLayout
+1119998 Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/frameworks/base into aosp-merge
+e4df126 Merge "Add simple caching to XML compilation" into jellybean
+af8bab3 Smdk4210RIL: block unsupported requests to avoid RIL wakelocks
+c4a132e Merge "telephony: reconcile Sony RIL with QualcommShared" into jellybean
+44a7772 Debug RILJ wakelocks on Smdk4210Ril:
+b5e4f0a Merge "Update Russian Translation-Mock SMS-CM10" into jellybean
+f8e7ec2 Merge "Status bar brightness control on lock screens" into jellybean
+e470d72 ril: avoid sending null aid string in getIMSI
+022224e Merge "base/TR: Allow Mock SMS" into jellybean
+363a6a1 Merge "frameworks_base: Minor fixes and some new translations" into jellybean
+9fae94d PackageManager: Restrict system packages to protected storage
+2e39691 Add simple caching to XML compilation
+c03c84c Update Russian Translation-Mock SMS-CM10
+4873a48 DO NOT MERGE - Full (local) restore security changes
+77a16ec Merge "PT-BR: Translations for SMS Mock" into jellybean
+f75f939 Merge "Frameworks/base: Updated italian translation" into jellybean
+6e3a3e6 Merge "frameworks/base: updated romanian translation" into jellybean
+5153459 Fix automatic brightness
+6e1a044 telephony: reconcile Sony RIL with QualcommShared
+4845a0d frameworks_base: Minor fixes and some new translations
+b6abba1 frameworks/base: updated romanian translation
+9f827ac Frameworks/base: Updated italian translation
+9a8117c am: Allow more hidden apps on devices with lots of RAM
+e943a89 Add CPU boosting hooks
+1d96fbc power: Add CPU boosting interface
+4aad10d Add @hide to MOCK_SMS stuff
+c4aa27a Status bar brightness control on lock screens
+16cd02a Revert "ril: avoid sending null aid string in getIMSI"
+814e909 ril: dedup mRilVer
+54ce1ff base/TR: Allow Mock SMS
+2c79e9c f/b: fix hungarian translation for Navbar settings
+2510248 Merge "PT-BR: Added NavBar Customization Translation" into jellybean
+201cbef NotificationBar: Force DateView to collapse to gain space for clear_all_button
+4bec296 Merge "Fix hardcoded "Cancel" string in Navbar editor" into jellybean
+5a5919a Merge "SystemUI: Updated italian translation" into jellybean
+3f5988e Merge "Framework: Use holo alert drawables" into jellybean
+f516725 Merge "Implement resolving of icon attributes to resIds in AlertController" into jellybean
+9e00914 Merge "SystemUI: Added missing danish translations for: frameworks/base/core" into jellybean
+495d002 Merge "Turkish: Fix too long ON/OFF text for setting toggle for tablets/phones" into jellybean
+4b3250e Merge "Framework Base: Fix some korean translation" into jellybean
+c9aa7d1 Merge "Update Russian Translation-SystemUI-CM10" into jellybean
+6f027d2 Framework Base: Allow Mock SMS (1/2)
+4a8249c Merge "DateView: Use Intent.ACTION_LOCALE_CHANGED to refresh notification bar clock" into jellybean
+f54e734 Merge "Added missing hungarian translation for Navbar settings" into jellybean
+b2379e8 Merge "base/SystemUI: Added Turkish translations" into jellybean
+6929288 fix build: add missing instance variable mRilVer
+4b78556 ril: avoid sending null aid string in getIMSI
+88af781 frameworks/base: avoiding tile rendering when rendertarget changes for same fbo
+5c189c5 Merge branch 'jb-release' of https://android.googlesource.com/platform/frameworks/base into aosp
+28871ab PT-BR: Translations for SMS Mock
+199bc56 Show plmn in emergency call allowed mode.
+a9d7d85 Get your own cursor Drawables, WebViewClassic!
+a411169 Framework: Use holo alert drawables
+468496d SystemUI: Added missing danish translations for: frameworks/base/core
+ba634ee Framework Base: Fix some korean translation
+a45e171 Implement resolving of icon attributes to resIds in AlertController
+b79fba5 Turkish: Fix too long ON/OFF text for setting toggle for tablets/phones
+b6bcd8f DateView: Use Intent.ACTION_LOCALE_CHANGED to refresh notification bar clock
+3705339 SystemUI: Updated italian translation
+6d5f67f Fix hardcoded "Cancel" string in Navbar editor
+bf757be base/SystemUI: Added Turkish translations
+ddf4c64 Added missing hungarian translation for Navbar settings
+588b79c Update Russian Translation-SystemUI-CM10
+2466538 Merge "es_ES: Added translations for new options" into jellybean
+23cb8cf Merge "Ported: Bluetooth Message Access Profile (MAP) from CM9" into jellybean
+678201e PowerWidget: Make widgets stationary like everything else in the tray
+5861d69 Merge "sensors: dummy ls: set unique handle" into jellybean
+3e8039a PT-BR: Added NavBar Customization Translation
+7ac396e sensors: dummy ls: set unique handle
+df9a272 es_ES: Added translations for new options
+2b79472 NavigationBar : Customization
+c771d5a Ported: Bluetooth Message Access Profile (MAP) from CM9
+1542217 RIL: make data call APN a selectable RIL feature
+2700d95 services: Fix tethering (softap) startup
+6de7a7e Merge "frameworks/TR: Initial commit for Turkish" into jellybean
+bd951ad Merge "Update Russian Translation-CM10" into jellybean
+1ff0aa8 Lockscreen: Add clock alignment (1/2)
+6b45718 Merge "Prevent from KR Locale's Ugly Japanese fonts (inside of NanumGothic.ttf)" into jellybean
+41b3dbf Merge "wifi: Allow Settings to retrieve country code" into jellybean
+7d4f59c Adds ability to answer call with hardware HOME button (preparation to winter time)
+5852c19 Lockscreen: Move weather request into thread
+a1605e7 Update Russian Translation-CM10
+19e6c4f frameworks/TR: Initial commit for Turkish
+5e8a7b4 Prevent from KR Locale's Ugly Japanese fonts (inside of NanumGothic.ttf)
+166f6b9 Revert "Triggering EarlySuspend based on BackLight brightness"
+f03958c wifi: Allow Settings to retrieve country code
+63b6611 Revert "hwui: Disable QCOM tile renderer by default"
+f59d6c6 frameworks/base: fixes for tile rendering issues
+fcc01b4 Remove opaque check in GLRenderer when preparing dirty region.
+0d3de13 webkit: Multimedia feature port from ICS
+8ac14f5 net: customize memory cache size
+ac187b6 [webkit] Runtime enablement of WebGL
+7993d74 Triggering EarlySuspend based on BackLight brightness
+049fd91 Merge "sensors: Add dummy light sensor" into jellybean
+de3debd Fix notification gestures.
+40c6ae4 Single finger notification expansion.
+e49e903 onSavePassword dialog can leak when WebViewClassic is destroyed.
+1b9777a Default WiFi sleep policy setting
+ce992dc Make SimpleSessionDescription locale safe
+d00f14a Make addAddress locale safe
+5b242ba Make setCaptureRate locale safe
+445b721 Fixes relative time formatting issue for dates in future
+b4b5041 Protecting more views from (bad) MotionEvents
+5e45622 WifiStateMachine: ignore auth-fail event during WPS connection
+2541146 Avoid system_server crashing due to mac address is null
+b0a013e VibratorService: Fix to ensure actual delay in a vibrate pattern
+fe6d3fb ActivityThread: Avoid creating duplicate handlers and reuse mH
+470e41c hwui: Add option to enable subpixel font positioning
+9c9faa1 sensors: Add dummy light sensor
+fb9e23c Merge "Activate Uighur language" into jellybean
+d00ee5c Merge "Framework Base: updated german translation" into jellybean
+643fb51 Merge "Framework Base: updated french translation" into jellybean
+47f6c7b Merge "Translation pt: "Reboot phone" title for phones"" into jellybean
+7485368 Merge "frameworks/base: Dutch translations" into jellybean
+d76a324 RILs: Eliminate repeated overrides of responseOperatorInfos.
+1f395ee Merge "KeyguardViewMediator: fix NPE when DEBUG=true" into jellybean
+a0e934d Activate Uighur language
+5036e52 Framework Base: updated german translation
+ba1026e Translation pt: "Reboot phone" title for phones"
+aab2434 HTCQualcommRIL: Set mUSIM and mSetPreferredNetworkType
+c421aca Merge "CatService: Handle CAT timeout" into jellybean
+2f3d0ab Merge "RIL for Samsung v6 RIL CDMA devices, based on SamsungRIL." into jellybean
+c0e0297 frameworks/base: Dutch translations
+ea3361b RIL for Samsung v6 RIL CDMA devices, based on SamsungRIL.
+2370126 DO NOT MERGE - Make WebView track focal points more accurately
+9d9fe3d DO NOT MERGE - Delay starting scale gesture events until a touch slop threshold
+5828d04 Framework Base: updated french translation
+0d30692 KeyguardViewMediator: fix NPE when DEBUG=true
+9ddec99 Fix for updating TCP buffer size when switching network type
+95e2644 Merge "Update korean translation" into jellybean
+79d3735 Merge "wifi: don't avoid poor connections if mobile isn't connected and avoid NPE on wifi only devices." into jellybean
+be23504 Merge "es_ES: Added missing translations" into jellybean
+fa4fd72 frameworks/base: Increase the buffer size to hold the whole content of the file.
+c19b201 Merge "WebView: fix crash when moving cursor" into jellybean
+f9757aa Merge "SystemUI: calculate height for tablet status_bar_settings_view" into jellybean
+db9b4bc policy: Fix vibrate setting in ringer toggle
+a65cd68 es_ES: Added missing translations
+5160bc0 Update korean translation
+d043240 Merge "am: Don't crash if cacheDir can't be created" into jellybean
+1ed9f20 am: Don't crash if cacheDir can't be created
+c0eec7d framework: Fix default wallpaper maxWidth
+503a454 WebView: fix crash when moving cursor
+d227c95 Merge "Fix SkBitmap::fPixels not being locked correctly" into jellybean
+2739849 es_ES: Added missing translations
+f237ca2 Frameworks: Option to control cursor in text fields using volume keys (1/2)
+0ff9628 framework: Allow specifying max wallpaper width
+d950b52 Merge "Add support for hdmi out on 1920x1200 tablet" into jellybean
+9c38da8 Merge "Lockscreen: Keep weather info up to date" into jellybean
+cd93864 Fix SkBitmap::fPixels not being locked correctly
+9366afd Merge "Fix percentage battery in tablet mode" into jellybean
+a265010 Framework: Remove Quick Message public API change (1/2)
+9eeb71d Fix percentage battery in tablet mode
+1e2831e Merge "PT-BR: Added Missing Translations" into jellybean
+5323457 Add support for hdmi out on 1920x1200 tablet
+eeaeaf8 Merge "Lockscreen: Glowpad Alignment - Multi DPI, Tested on sgs, sgs2, sgs3 and GNex" into jellybean
+3c6dbf3 Framework: Add Quick Message Support (2/2)
+1d28bfe Porting National data roaming option from CM9. (1/2)
+a9b0bd6 SamsungQualcomm RILs: throttle multiple outstanding SEND_SMS requests
+0c9aa57 Add resource to disable the CM Phone IME selector method (2/2)
+1dc211c Merge "Danish translation correction. Old translation said "Sådan åbner du dine apps." which means "How to open your apps." however, the original text said "Starting apps."" into jellybean
+c420268 Correct Change I32c89b82
+995da9c Merge "Update korean translation" into jellybean
+a58a1ef Register naver fonts to system.
+0f4e7b7 Framwork: Add support for variable size pattern lockscreen (Part 1/2)
+0f1f6f1 Merge "Frameworks/base: Updated italian translation" into jellybean
+77bf72a Revert "Update Back softkey icon Bug: 6020915"
+c104d16 DO NOT MERGE GestureDetector - Mask action when checking POINTER_UP
+9763c05 CatService: Handle CAT timeout
+9955dfc wifi: don't avoid poor connections if mobile isn't connected and avoid NPE on wifi only devices.
+08c0c3b card emulation patch port to JB
+c4388da Lockscreen: Glowpad Alignment - Multi DPI, Tested on sgs, sgs2, sgs3 and GNex
+21ee2ca DO NOT MERGE Remove dead code
+8be03ac DO NOT MERGE - Use focal point for scrolling in GestureDetector
+48c7c6c DO NOT MERGE - New implementation for ScaleGestureDetector
+d05970e Added check of ActivityInfo launch mode when starting activity.
+ee8fc54 ContentProviderRecord: Remove external process reference when finalized
+0509374 ActivityManagerService: stay away from zombie content providers
+9eaf92b ProviderMap: remove hashmap when entire user specific entries are removed
+dba8a81 Fix CDMA decoding of multipart UTF-16 SMS messages.
+7954ffa Merge "Changed settings to show PowerMenu on Tablets" into jellybean
+00fe238 Update korean translation
+
+   * frameworks/compile/libbcc
+9fb089d Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/frameworks/compile/libbcc into aosp-merge
+0de4405 Merge branch 'jb-release' of https://android.googlesource.com/platform/frameworks/compile/libbcc into aosp
+
+   * frameworks/compile/slang
+2ce1028 Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/frameworks/compile/slang into aosp-merge
+
+   * frameworks/native
+c32d014 surfaceflinger: Show layers using copybit in dumpsys
+3c0c758 dumpstate: Fix calls to su to specify a shell command
+26b3d2f dumpstate: Skip subsequent showmaps if the first run fails.
+f684956 Revert "Fixed clang build error for libgui"
+fabd533 frameworks/native: Increase EGL blob cache size limits
+d931bb2 Allow disable of dumpstate vibrate
+fe56232 Return back-end result from eglDestroyImageKHR
+752dedd egl: Reintroduce eglGetRenderBufferANDROID
+07cc02d Fixed clang build error for libgui
+d7b583d EGL: do not use sparse files for shader
+8337af1 Fixed sample video corrupted in MediaCodec mode.
+755dd80 libagl: Transform the vertex if using eye space lighting with point lights
+dce153b Fix error trap in SurfaceTexture Client
+353d3a7 Fix shutdown sequence to avoid SIGSEGV when running am command
+1c6d008 exynos: Apply format usage flag hack to YUV420P
+df9e320 Merge branch 'jb-release' of https://android.googlesource.com/platform/frameworks/native into aosp
+be5b665 surfaceflinger: Fix ifdeffing
+a776948 Merge "i9300: Clean up a bit usage flag hack" into jellybean
+02a9618 frameworks/native: Add support for copybit in Surfaceflinger.
+ab74c2d i9300: Clean up a bit usage flag hack
+56fae2a Fix gralloc private flag for video playback
+d9eca25 libgui: Add support to update buffer geometry.
+3e21250 SurfaceFlinger: Removal of NO_RGBX_8888 flag for OMAP3
+b39920b frameworks/native: SF: Adapt vertices to GL co-ordinates
+738f756 SurfaceFlinger: update sourceTransform in hwc_layer_t
+5e76750 native: use standard cm qcom ifdef
+70dcb1b Revert "surfacetexture: Add API to set the min undequeued buffer count"
+
+   * frameworks/support
+f31d1db DO NOT MERGE Fix bug #7297028 Settings app crash when swiping between Downloaded / Running / All for Apps
+
+   * frameworks/testing
+8684e6c Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/frameworks/testing into aosp-merge
+
+   * hardware/libhardware
+bb992a8 libhardware: Add new APIs to support effects with DirectTrack
+855d9ca libhardware:Fix for memory leak by get_parameters call
+96a2223 power: Add POWER_HINT_CPU_BOOST
+6f3fda3 power: Extend power module definition.
+b9bfffc gralloc: added exynos4 specific usage bits
+3505792 hardware/libhardware: Added string for handle a2dp device
+799ca87 hwcomposer: Add sourceTransform to hwc_layer_t
+ff824a1 audio: fix when using ICS audio blobs
+83a5146 libhardware: Load the MPQ HAL for the MPQ8064 target
+
+   * hardware/libhardware_legacy
+24dc9ee Fix build error caused by ar6000 workaround
+2a94ab6 libhardware_legacy/wifi: add workaround for ar6000 driver
+9292c58 libhardware_legacy: Add APIs to support effects with DirectTrack
+50186e1 Merge branch 'jb-release' of https://android.googlesource.com/platform/hardware/libhardware_legacy into aosp
+3bb6e83 audio: JB upgrade for the MPQ 8064
+
+   * hardware/qcom/audio
+adb9c44 alsa_sound: Re-add HTC_AUDIO, SAMSUNG_AUDIO, and USE_A2220
+01330b5 alsa_sound: Re-add DOCK_USBAUDIO.
+7d1a3b3 Merge "audio/msm8660: Fix for Mute not working in VoIP call" into jellybean
+44e24a0 audio/msm8660: Fix for Mute not working in VoIP call
+fd38603 alsa_sound: A2DP playback changes on jellybean
+09ba9b7 audio/msm8660: Add support for audio effects for LPA clips
+ea081ab audio/msm8660: Fix the issue of voice call when HDMI connected
+97fbc20 audio/msm8660: LPA Audio HAL fixes for suspend and eos issue
+6bfd17b audio/msm8660: Fix to avoid routing in voice call
+083ccce audio/msm8660: Fix audio routing issue during cam corder
+1ee5b1f alsa_sound: Enhance support for dock audio.
+cceb835 Legacy QCOM audio does not support ext functions
+a485079 Samsung msm8960: Add support for "Voice Earpiece Extra Gain" mode
+1fc07f4 Legacy QCOM audio does not support ext functions
+e6dba04 alsa_sound: Add miscellaneous fixes to AudioSessionOut.
+65b5d44 alsa_sound: Fix EOS - Seek issue.
+517ad31 alsa_sound: fix a merge error which broke LPA functionality
+0182ea5 msm7x30/AudioPolicyManager: remove erroneous QCOM_FM_ENABLED ifdef
+56c5845 Merge "audio/msm7x30: Merge with CAF" into jellybean
+a676349 audio/msm7627a: Handle error cases during postproc enable
+d030328 audio/msm7627a: Derive AudioPolicyManager and add FM device
+17e1b4a alsa_sound: Force calling of setVoiceVolume at the start of every call.
+8a41c77 msm8660 audio: fix BT in-call routing on non-HTC phones
+24517f4 alsa_sound: Design changes in HAL to support post proc effects
+96ce32d Merge "audio/msm8660: fix a2dp" into jellybean
+60ed0bd audio/msm7x30: Merge with CAF
+8953dea audio/msm: fix 7x30 and 8660 voice call volume
+8aac75c audio/msm8660: fix a2dp
+fa119b4 audio/msm8960: add ifdef for USB audio in FM audio ifdef
+a9da145 audio/msm8660: re-add HTC acoustic audio/aic3254 support
+420de82 audio/8660: Add a couple more ACDB identifiers
+1029ac7 Revert "audio/8660: htc and aic3254 support"
+a1e518e Merge "audio/msm8660: enable QCOM_ACDB_ENABLED CFLAG for QCOM_HARDWARE" into jellybean
+fc0e36a audio/8660: htc and aic3254 support
+7aa0786 alsa_sound: merge HTC cases with existing usage cases
+ddf5348 audio/msm8660: enable QCOM_ACDB_ENABLED CFLAG for QCOM_HARDWARE
+d50517f audio/msm8660: add ifdefs around LPA implementation
+dc9c5a2 audio/msm8660: always show device list
+53cf5b1 audio/msm8660: Fix for LPA playback stops  when suspend happens
+e5ca17d audio/msm8660: ifdef ANC
+fa042cb audio/msm8660: Fix for native crash during LPA swith to BT.
+afc5b71 audio/msm8660: underp routing/ifdef
+4f00d9b audio/msm8660: fix build after ANC patch
+01a92ab audio/msm8660: Add ANC headset support
+a177b95 audio/msm8660: Fix to use low power audio session for MP3 and AAC clips
+9d6b407 audio/msm8660: allow building with LPA
+9aff97b Revert "audio/msm8660: disable caf policy for now"
+a3b9be7 audio/msm8660: misc fix
+8fc0dfa audio/msm8660: Enable VOIP calls
+ef55d34 audio/msm8660 : Implement low power audio in Audio HAL
+f717b3a audio: Various fixes for Samsung msm8960 devices
+0d9f06a aenc-aac: Reduce insane log verbosity
+e44b168 alsa_sound: Read system prop to set fluence type
+01c164c alsa_sound: Add support for Audience A2220 chip
+7762609 alsa_sound: Add option to disable dualmic for speakerphone
+
+   * hardware/qcom/display
+5b1f947 liboverlay: close all the opened pipes after framework reboot.
+bdce806 display: fix display for msm7x30
+ae4ab54 liboverlay: ensure open fd's are always closed
+7878b0c liboverlay: ROT_DOWNSCALE is not supported in all MDP versions.
+c3f0998 libhwcomposer: Enable rotator downscale for pip.
+afb477c liboverlay: Rotator-assisted video downscale.
+edee32b display: Link liboverlay with libqdutils
+1edb4f4 display: Unbreak GPU layer detection
+f64b867 hwcomposer : Send Video layers below skip layer to GPU
+1325977 liboverlay : Update magnification limit for MDP 400
+8d85285 hwcomposer: Modify qcomuiClearRegion to rely on GPU layers only
+8b6b3f7 Older QCOM devices don't support OVERLAY_COMMIT
+4299590 hwc_external: Support auto-setting of HDMI resolution
+937dd80 hwcomposer: 7x30: disable overlays for video playback
+ead7a36 overlay: mdprot: Call rotator start only on config change.
+2a42656 libhwcexternal: remove unnessary ioctls
+a00ed48 libhwcomposer: Fix UI freeze on 8660 on HDMI cable connect
+a085154 libhwcomposer: Correct an enum mismatch in the HAL.
+723df4b HWC/copybit::Add condition for video layer composition
+299af5c hwcomposer: Add secure intents to support Secure Playback
+4365be7 hwcexternal: fixes in hwc_external
+2d69977 hardware/qcom/display: Remove glfinish call
+e826237 libhwcomposer: Fix bug caused by change 152124
+b1a5195 libqdutils: Fix crash in checkForGPULayer
+f635ab4 hwcomposer : Synchronize EventThread, and hwcVsyncThread
+f7b10c6 hwcomposer : Use sysfs to read vysnc information
+d30d47f Revert "hwc: Support VSYNC notification via sysfs"
+ff89881 libhwcomposer: Check for downscaling with alpha
+3a3eda7 libqdutils: Initialized GPU layer present flag to false
+0d47bc4 hwc: Support VSYNC notification via sysfs
+07abddc hardware/qcom/display: avoiding tile rendering when render target changes for the same fbo
+5adda67 libqdutils: Add copybit support to qdutils
+87d1af9 display: Add support for video rotation on Ext display
+bacd517 libgralloc: Add RGB_888 format as BUFFER_TYPE_VIDEO
+6175ab3 Merge "gralloc: stop the log spam" into jellybean
+3348d17 gralloc: Don't use FB metadata on gimpy targets
+b57bd4e libgralloc: Set alpha mode for MDP base pipe.
+fb33c84 hwcomposer: Remove vsync event control for WFD External Display
+b26af0c liboverlay: Make sure the crop rectangles' dimensions are even
+3cf476b gralloc: stop the log spam
+6d52cc0 hwc: Close overlay when HWC disabled
+92ddab0 libhwcomposer: Close MDP PIPES in hwc_prepare.
+f52507a hwcomposer: keep secure content in an overlay when below skip layer
+8bd0296 libhwcomposer: Reset layer list before clearing MDP states.
+94ba6b4 libgralloc: Fix possible leak of fd
+5a4fd73 hwc: wait for fb_post, PAN only if target has overlay.
+bbac161 Overlay: Change MDP format for YV12 buffers
+8977060 hwc/overlay: Add premultiplied alpha support.
+3b63558 hwc: video: Create crop and position structs only once.
+7b65335 display: Add support for video rotation on Ext display
+6bb6aca copybit: Fix crash when copy_image is called with Tile format
+bd134d9 hwc: Call swap buffers even on NULL lists
+c5bb0bb hwc: Correct default value of dynThreshold
+5fcbecb hwc: Set premultiplied alpha flag appropriately
+ea45dc7 hwcomposer : Use system property to set DYN composition threshold
+cefd36b overlay: Remove OVASSERT from getFormatString utility
+adec9c3 libgralloc: Allocate buffer Fix.
+c9b4834 libcopybit: fix YUV buffer alignments as per gralloc
+dbf99e3 Add support for PIP, picture in picture feature
+30f956e libqdutils::Use qcomuiClearRegion for dynamic composition
+48bcc28 hwc: Enable MDP_BACKEND_COMPOSITION
+49fe11d qdutils: Add MDP v3.0.2 detection.
+fc1c157 Merge "qdutils: Don't assume we support overlay without version info." into jellybean
+3f16656 hwc: Unlock prev. buffers in N+1th draw round.
+daf9967 display : Do not use copybit for composition when YUV layer is present.
+3d176cd hwcomposer : Disable bypass, when connected to external display
+
+   * hardware/qcom/media
+266277e vidc: Align ion buffer length before allocating it
+71aa406 mm-video: vidc: suppress non-fatal error messages.
+423b8de mm-video: vidc: Try to open secure video decoder again.
+bcc62c0 mm-video: vidc: Add support for Smooth streaming for secure mode playback.
+39dd852 mm-core: Add support for Smooth streaming for secure mode playback.
+1a880a3 mm-core: Add MPEG-2 extension and user data types
+
+   * hardware/samsung
+79e21ef exynos3: omx: moar love for p1
+88fda93 exynos3: power HAL: add support for interactive governor
+81c2e05 Move macloader to hardware/samsung
+76a153a Power HAL: Remove sampling rate change
+5bff9ac s5pc110: Add Power HAL (userspace CPU boosting)
+3c938a7 exynos3: Implement custom VSYNC IOCTL
+
+   * hardware/ti/omap3
+b7c4c0d omap3: Updates for JB compatibility
+8024869 Merge omap3-cm9 into omap3-merge
+0c5c565 omx: Fix build failures
+
+   * hardware/ti/wlan
+48d1807 WLAN - wlconf: add wlconf code
+3d851dd WLAN - add autogenerated file to gitignore
+e14cce7 WLAN - wl12xx: Update to R5.SP3.01 from R5.SP2.04 package
+917853d WLAN - wl18xx: Update to R8.a4.02 from R8.a2.09 package
+
+   * hardware/ti/wpan
+53fd67f ti_wpan: build wpan only if device requires it
+
+   * kernel/samsung/aries
+dabec1a s5pc110: Improved OC code
+559b0da Add ability to under- and overvolt.
+3d6851e cpufreq: boostfreq: do not set to current value
+615090c enable 1.2GHz OC
+e6a4849 cpufreq: enable and update interactive governor
+ffa7644 config: enable zram and swap
+6c5fde8 Call cpufreq_update_policy on DVFS events.
+2e069ce USB: gadget: fascinatemtd only has one lun
+c8fb5e4 Don't require gstat on OSX
+2234433 Merge branch 'android-samsung-3.0-jb-mr0' of https://android.googlesource.com/kernel/samsung into HEAD
+35847d6 aries-vibrator: add sysfs interface to control vibration intensity
+d8f6121 aries: Use DVFS locks instead of cpufreq policy mangling in pvr.
+789d928 Update charging animation to match OSS charger
+f84bc96 use logical volumes for system and data, bring back datadata
+e74f095 drivers: cpufreq: Send a uevent when governor changes
+aca000c cpufreq: ondemand: Default to max
+b683f41 drivers: cpufreq: Add max duration for boosting
+6373c81 cpufreq: ondemand: Add duration for boosting
+d6cf17c cpufreq: ondemand: Fix the boostpulse interface
+dae5060 cpufreq: Add a boostpulse interface to ondemand
+2880a01 Revert "aries: add input boosting to ondemand"
+812f0f6 s3cfb: Don't lock for vsync poll
+04a97b4 Replace VSYNC uevent thread with a custom IOCTL.
+5894150 net: wireless: bcmdhd: Report proper mcs rate mask
+0dbdf1f fascinate: better fixes for issues in dpram modem driver
+e839092 cypress-touchkey: disable fascinate touchkey filter debug output
+b1ce5e1 remove broken Samsung param module
+5ad899a netfilter: xt_qtaguid: report only uid tags to non-privileged processes
+782ca40 netfilter: xt_IDLETIMER: Rename INTERFACE to LABEL in netlink notification.
+
+   * libcore
+e06ba13 Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/libcore into aosp-merge
+1e8ec26 Merge "Increment OpenSSLKey EVP_PKEY reference when it is selected for use with SSL_use_PrivateKey" into jellybean
+0a91b3e Increment OpenSSLKey EVP_PKEY reference when it is selected for use with SSL_use_PrivateKey
+d18b7a8 Manually inline StrictMath.min(JJ) and StrictMath.max(JJ).
+ad56af9 Fix a native memory leak in SimpleDateFormat cloning.
+0c37ea2 Merge branch 'jb-release' of https://android.googlesource.com/platform/libcore into aosp
+d37fb6f Performance improvements: DiskLruCache, HttpResponseCache.
+
+   * packages/apps/Apollo
+06c78ff Make apollo survive usb mounts
+f121136 Apollo: Update for Czech translation
+4a8aad4 fix for NullPointerException
+71bdd58 Apollo: Added danish translations for external file dialog
+fdc1d3e Apollo: fixed romanian translation
+42fb41b Merge "update gitignore" into jellybean
+60b8bae Modified the Apollo Play Store string for the Norwegian translation. Pretty sure Google does not brand the Play Store as "Play Butikk" in Norway.
+bde28bb update gitignore
+d55e364 Merge "Apollo - Corrected Croatian translation" into jellybean
+7ff9836 Merge "Apollo: romanian translation" into jellybean
+c258ba7 Merge "Improved Finnish translation for Apollo" into jellybean
+658e94b Apollo - Corrected Croatian translation
+e80c5ce Apollo: romanian translation
+dacb27e Improved Finnish translation for Apollo
+d2fa92d Apollo: Remove untranslatable strings in language NB
+8e9a86c Apollo: Norwegian translations
+c45bfc5 apollo: Gapless playback
+b14e0e5 Merge "Update Russian Translation-Apollo-CM10" into jellybean
+df12e5e Merge "Apollo: Korean translation" into jellybean
+106d334 Merge "Apollo - Added Croatian translation" into jellybean
+bf65a1f Update Russian Translation-Apollo-CM10
+5f6b676 Apollo: Korean translation
+d1b32ec Appolo: Added czech translation
+d64ec6b Apollo - Added Croatian translation
+cf9f30d es_ES: Added missing translations
+04b564d Merge "Apollo: Remove untranslatable strings in values-sk" into jellybean
+
+   * packages/apps/BasicSmsReceiver
+793edc4 Improved Finnis translation for the Basic SMS Receiver app
+
+   * packages/apps/Bluetooth
+0ed3d87 Bluetooth: Dutch translations
+23b1020 Czech: fixed unicode code
+4e5575c Czech: fixet national quotation marks
+a195396 Czech: revised and completed translation, changed length of too long        string
+18e2a65 32 bit int shifted by 36 bits at BluetoothMasObexServer.getUint32BigEndian
+2a930a0 Bluetooth MAP profile fix
+dec1168 Improved Finnish translation for the bluetooth app
+c2fcca6 Upgrade the app to better follow holo guidelines
+daaf5bd Merge "Bluetooth: Use proper holo alert drawable" into jellybean
+77bf535 Bluetooth: Updated italian translation
+6d0ef41 Ported: Bluetooth Message Access Profile (MAP) from CM9
+a55eca0 Bluetooth: Use proper holo alert drawable
+8f464d0 Merge "Accept all mimetypes for inbound bluetooth file transfers" into jellybean
+
+   * packages/apps/Browser
+7ece7a6 Czech: fixed transaltion, unified strings, added missing strings,        fixed national quotation marks
+451316c Browser : added missing French translation
+1bc48b6 Revert "Czech: fixed transaltion, unified strings, added missing strings"
+5f0fcf3 Czech: fixed transaltion, unified strings, added missing strings
+c9ec70b Fixed compiler warnings
+63b5ff6 Fix the build
+2af1bd4 Updated and improved Finnish translation for the Browser app
+5c37e3a Merge "Browser: Added czech missing translation and update" into jellybean
+ea21463 Browser: Added czech missing translation and update
+6745452 Browser - Updated Croatian translation
+c96f8fb Update Russian Translation-Browser-CM10
+ecb4e73 Merge "Browser: Dutch translations" into jellybean
+1428aae Merge "es_ES: Added translations for recent options" into jellybean
+348609e Merge "Added hungarian translation for video preload and webGL settings" into jellybean
+5829a3b Merge "Browser: Add chinese translation for WebGL and preload video." into jellybean
+5433a91 es_ES: Added translations for recent options
+acc1ec6 Browser: Dutch translations
+2c377b7 Merge "Update Russian Translation-Browser-CM10" into jellybean
+2170ca2 Merge "Browser: Updated italian translation" into jellybean
+c2e585a Merge "Browser: Danish translations" into jellybean
+33dc112 Browser: Add chinese translation for WebGL and preload video.
+eb1fdb5 Added hungarian translation for video preload and webGL settings
+de8b578 Update Russian Translation-Browser-CM10
+58cf4ed Browser: Updated italian translation
+81ab67f Browser: Danish translations
+1c42dec Add fullscreen toggle to menu
+9854e41 Adding exception handler for voice recognition activity
+0059fc7 Runtime enablement of WebGL
+9aa4a1b Multimedia feature port from ICS
+fdebf36 Merge "Browser: Add Chinese translation" into jellybean
+cf31dcf Browser: Add Chinese translation
+92c7f5b es_ES: Added missing translations
+
+   * packages/apps/CMFileManager
+79d1b6e Merge "CMFileManager: Simplified Chinese Translations" into jellybean
+67531d4 Merge "CMFileManager: Updated italian translation" into jellybean
+d635f07 CMFileManager: Updated italian translation
+ad6af15 German: Update translation
+671b344 Merge "es_ES: Added new translations" into jellybean
+1225dad es_ES: Added new translations
+8537a1b Update Russian Translation-CMFileManager-Themes support-CM10
+be8ae15 Added hungarian traslation for CMFileManager (Done)
+00e862b CMFileManager: Simplified Chinese Translations
+0b82260 CMFileManager: updated Czech translation
+554c4a7 CMFileManager: Themes support + Dark theme
+17d3b81 CMFileManager: Fix translation strings
+2f9d3a4 Merge "PT-BR: Initial translation" into jellybean
+6806f0e Merge "CMFileManager: update German translation" into jellybean
+4e4e99f Merge "CMFileManager: initial romanian translation" into jellybean
+2a7122c Update Russian Translation-CMFileManager (fix typo)-CM10
+cd5a5a9 CMFileManager: initial romanian translation
+7e504da CMFileManager: Updated italian translation
+9d5ebc9 CMFileManager: update German translation
+d153141 CMFileManager: Fix crash when select CMFileManager internal editor to open text file.
+8dc8c05 CMFileManager: Fix the crash when the search file name includes mutiple white spaces.
+cad7441 PT-BR: Initial translation
+3ae1d1d Merge "CMFileManager: Fix mv operation on Cross-device link failure" into jellybean
+e4dd07c Merge "CMFileManager: Remove incorrect notifyDataSetInvalidated()" into jellybean
+3d70048 CMFileManager: Fix NPE while retrieving background console
+9fca3f9 CMFileManager: Remove incorrect notifyDataSetInvalidated()
+b1d5cd1 CMFileManager: Fix mv operation on Cross-device link failure
+9fe2cd7 Merge "CMFileManager: Corrections in Czech translation" into jellybean
+7dfe5fb Update Russian Translation-CMFileManager (fix typo)-CM10
+41f502f CMFileManager: Corrections in Czech translation
+dca975d Merge "CMFileManager: initial czech translation" into jellybean
+9637ddd CMFileManager: initial czech translation
+64571fe CMFileManager : Fix French Translation
+2dfee94 CMFileManager: Fix list of folders with broken symlinks
+b5ce060 Merge "CMFileManager : Fix duplicate debugging output" into jellybean
+8c8af16 CMFileManager : Fix duplicate debugging output
+8a0b4b7 Merge "Update Russian Translation-CM File Manager-CM10" into jellybean
+cd890fc CMFileManager : Beam to send files
+0e77cf3 Update Russian Translation-CM File Manager-CM10
+b060162 CMFileManager : Allow rotation
+4e9f8bb CMFileManager : es_ES translation fixes
+d17ce4e CMFileManager: fix german translations
+0a5c60e Merge "CMFileManager: updated Dutch translations" into jellybean
+ca20d26 Merge "FileManager: Danish translation" into jellybean
+01073fc Merge "CMFileManager: initial german translations" into jellybean
+541b018 Merge "CMFileManager : Added French Initial translation" into jellybean
+23f2e7c Merge "CMFileManager: Simplified Chinese Translations" into jellybean
+dccb848 Merge "Initial Russian Translation-CM File Manager-CM10" into jellybean
+75f1343 CMFileManager: updated Dutch translations
+c48eb7c Merge "CMFileManager: Added italian translation" into jellybean
+db1f4e0 CMFileManager : Added French Initial translation
+6c3d4f6 CMFileManager: Simplified Chinese Translations
+7b8969d Merge "CMFileManager: Dutch translations" into jellybean
+fe5ab98 CMFileManager: initial german translations
+8061ab3 CMFileManager: Dutch translations
+bf52647 Merge "es_ES: Added initial translations" into jellybean
+a01aa27 Initial Russian Translation-CM File Manager-CM10
+1fc1d2c Merge "CMFileManager: Avoid crashes when drawable is not found" into jellybean
+dcbeb44 CMFileManager: Avoid crashes when drawable is not found
+371a637 CMFileManager: Fix invalid mime/type drawables
+09805a4 CMFileManager: Added italian translation
+c409789 CMFileManager: Fix backwards dialog options + Typo
+dfa7f62 es_ES: Added initial translations
+43746a8 CMFileManager: Fix compile error
+c88c305 CMFileManager: Fix formatting
+7ca4348 FileManager: Danish translation
+ebe44c3 CMFileManager: Fix file size units
+e6334c0 Tweak image
+ef1d6e2 Fix XHDPI history drawable
+432c1f5 Initial tablet support
+524b82a Enable rotation
+8b4156f Better start effect (white action bar style)
+ef9ba79 CleanUp
+c745aba Hide flinger listview settings. Default is not to use flinger listview.
+cc952a3 Don't scroll when flinging. (has some effects over scrolling) (issue #8)
+d921b98 New methods for deal with Android
+ea5c5b2 Remove unused imports
+d643034 Merge branch 'master' of git+ssh://git@github.com/jruesga/CMFileManager.git
+c236561 If no flinger listener set, then do not trap any event
+e30ff77 Minor update to text
+fdd6d8f Show changelog inside the application  (issue #6)
+af12854 Readme & Changelog (issue #5)
+3d75aa8 Better read handling
+b91ea8a Better flinger scrolling detection
+b069769 Update the internal array when a item was remove
+8496701 Remove create copy y rename from search actions dialog
+28ac308 Fix incorrect InsufficientPermissionsException detection
+e72d167 Better dialog titles
+2765bd3 Flinger gesture detection support (issue #8)
+de6628e CleanUp whitespaces
+6357b57 Merge branch 'master' of git://github.com/jruesga/CMFileManager into dvt
+fd47740 Use more user friendly terms for priviledged and non-priviledged mode
+34076a1 Prevent editor from receiving focus on startup
+9676ee6 Disable the editor on error
+22e4eca Force to destroy the consoles on exit event
+cd36a93 Catch InsufficientPermissionsException exception on read files
+2f1d0f4 Fix coding style
+ac2aad9 One more dialog icon to remove (issue #21)
+b5a78dd Replace 'arrows' actions icon with new '8-dot' icon (issue #23)
+81cc580 Delete confirmation dialog box title is wrong (Issue #18)
+979af9d Use AsyncTasks to load bookmarks and history
+9aace43 Remove console selection (Issue #17) - Part III (string messages)
+dfd3073 Remove console selection (Issue #17) - Part II (Settings & Code)
+3d52078 Remove console selection (Issue #17) - Part I (UX)
+36ab322 Fix more lint suggestions
+6139368 Fix lint advise
+70952aa The overflow menu should not show as an icon on devices with a physical menu button (issue #14)
+fa69e63 Remove exit menu (issue #19)
+aab7886 Display the raw representation of the type and permissions
+12063a5 Remove actions menu icon (issue #21)
+b968899 More focused drawables
+6be595d Change application name to 'File Manager' (issue #20)
+7370b71 Refresh navigation view after save file
+3210ba1 Check size of assets to conform Android design guidelines (issues #12 and #15)
+d4aa953 Remove unused drawables (issue #11)
+5c9ec60 Add smooth scrollbar to execution dialog
+7f55153 Add EXEC mime category to editor
+75d252f New image for the actions button (issue #11)
+fd7dd08 Add cancel button to dialogs
+a6343ac Fix copyright
+9c03053 Added a check for detect binary files.
+609c610 Fix Inverted variable
+3c9f849 Support of Internal Editors (Issue #4)
+0ccbd08 Typo
+6cc73ab Better search related strings
+650c806 More strings cleanup
+e2e9a00 Merge branch 'master' of git+ssh://git@github.com/jruesga/CMExplorer.git
+77b9508 Fix issue #9
+885f624 Fix issue #3
+25b03b7 Merge pull request #13 from jruesga/dvt
+d0b8afa Update settings and strings to conform to design guidelines
+c0d280d Reset buffers after data is parsed
+cb113b8 Strings cleanup part 2
+11a0997 Initial Strings Cleanup
+262da72 Revert "Initial strings cleanup"
+1538c33 Initial strings cleanup
+ca4183a Merge pull request #1 from DvTonder/master
+3901932 Update AndroidManifest.xml
+6fbce31 Update res/values/styles.xml
+1dd165f New action "Add shortcut"
+33e0c39 Remove onConfigurationChanged from Application
+9d12883 Force landscape as same as other activity
+173ef89 Destroy the process after stream closing
+7e3b9d0 Fix action menu button listener
+18aa30d VoiceSearch is not showing the icon
+5b23261 CleanUp
+7c2f8db Complete support for Java console (WIP)
+a414483 More support for Java console (WIP)
+7a6f901 Added chrooted mode to the description of search directory
+8289711 Fix incorrect chrooted mode in user defined bookmarks
+239a3c9 Fix incorrect set of advanced setting
+446a029 Added support for Java console (WIP)
+f6fe569 Use public method to build the non-privileged console
+fc28976 Add mounts file to overlay. Set non translatable
+124b80b Typo
+ed6b256 Typo
+e2f5085 By default don't show symlinks
+0b0f9fe Don't allow advanced mode if device is not rooted
+c48f71a Expose to the app if the device is rooted
+220dbb5 Avoid using internal commands in ShellExecutableCreator
+a9540c5 Fix ChRooted mode. Don't show parent directory on root storage volume.
+b7286e5 CleanUp
+83b43c6 Close consoles when need to call to finish
+f4d4731 Separate shell files from binary/executable files
+fccf98f Fix exec command: Invalid -c option
+3fb19cd Detect debuggable mode, and set different execution timeouts
+ef572ac Minor changes to console
+dcdb15c Fix invalid message in advanced mode. Fix translations.
+58f9d47 Extract destroy method of console. Remove :main from process name.
+1c69643 Don't allow to change the permissions of a Symlink
+4389611 Rename jail room terms for a more convenient chrooted
+57f69dc Fix getFileInfo calls. The return of this function must be checked
+288ca4c Remove support dependency
+1d67645 Fix AssociationDialog
+749e4a0 Proguard: Keep preference's classes
+bcab7af Fix size of spinners of FsoPropertiesDialog
+3de9ddb Fix detection of compression files without extension
+35db468 Make StorageHelper independent from AOSP and CM10
+27b7ffa New activity "Picker Activity"
+c334085 Jail room mode
+6808393 Fix transparent inverted color
+f2b04da Revert check_on_normal_inverted drawable
+c8d044a Remove obsolete resource
+dc6144f CleanUp
+7cd227b Welcome message
+952b499 CleanUp
+d12960c New search action "Open parent"
+8e2c09f New fso and global actions "Compress" and "Compress selection" + CleanUp
+09ea82a New drawables for compression mime/type and dialog icon
+f4fbedb Reorganize ActionsPolicy to make it clearly
+54e70ea New fso action "Extract"
+f3dd56e Fix uncompress command bugs
+44100f9 Add a method to check if the current console is privileged
+6143b53 Add zip as a supported uncompress method
+ce6bc8b Check getFileInfo is null
+4896199 New uncompress command
+4e2f063 CleanUp
+30c2aea Add new compress mime/type formats
+28a7986 New compress command
+bd2dc0c CleanUp comment
+a549e6e Resolve extension of tar.gz, tar.bz2 and tar.lzma
+ff9fde9 Remove older comments
+9d399fd New action "Execute"
+c7d9090 Add clear history to HistoryActivity menu
+8268826 Add file category to fso properties dialog
+ff03d83 Fix incorrect call to parsePartialResult (for async programs)
+e05ec66 Better handling of FolderUsage
+b98418b List command requires do no check No such file or directory when error code == 0
+2d7b380 Various: new commands and buffer management
+dc925f7 Fix problem with buffered readers and writers (don't use)
+d93c1a9 Allow to programs request write to the stdout
+0e93b7c Environment.getRootDirectory doesn't return the root directory
+438b5f6 Fix TestCases
+19eddf2 Don't use -f flag in rm command.
+0be3999 Remove trailing whitespace
+448d4ea Replace cancelled by canceled
+d7f59af Don't hardcode the root directory
+b8babc0 Use overlay for root directory
+22e345c Don't resolve link when apply user preference in sorting
+69c0057 No show create link if current directory is in storage volume
+c6202fb Various
+007f791 CleanUp
+63dc579 New command: ExecCommand (for execute commands)
+c0a0acd New command: LinkCommand (for create symlinks)
+26374b9 Create StorageHelper, and redesign BookmarksActivity (II)
+719efac Create StorageHelper, and redesign BookmarksActivity
+fe687a5 Revert refresh of new fso
+26c844f New global actions "Paste selection" and "Move selection"
+d2c9d01 New global action "Delete Selection"
+a3c1736 Deselect all items on an operation (create folder, delete file, ...)
+76d0333 Fix statistics computation for symlinks
+77bf8cd Better resolve of symlinks in list command
+da61ea1 Better history search drawable
+2f9c944 Fix a bug in back of navigation activity when there is a search element
+d94a0a0 Better symlinks handle
+4e363cc Sort the items by path to avoid delete parents fso prior to child fso
+962e749 When no console available, ask the user prior to exit
+b03fde5 Restructure ActionsPolicy and other changes
+fdd2507 Not restrict MessageProgressDialog to number progress
+1a0a6ee Use -a flag in copy operations
+0c1d1d1 Fix slash in paths for ListCommand
+74360c6 Fix InputNameDialog actions
+e02e883 Avoid read stdin when is null
+384a211 Don't the method onSaveInstanceState and onRestoreInstanceState
+ce79fe2 Implemented Allow Console Selection setting
+2116cc2 Refresh the navigation view after back from the search view
+d8214ad Redesign of some mime/type drawables
+2d57f3a Redesign of bookmarks drawables
+78a56ac A bunch of changes.
+0b1564b Open and Open with actions
+746b791 Revert Association Provider. Instead, use AOSP PreferredActivity api.
+54e31dc Allow dialogs with no icon
+0a50801 Lint warnings
+6263ee4 Use new ObjectStringIdentifier to default preference
+b35371a Improve DiskUsageGraph layout
+f641643 Improve dialog layouts
+0b2002b Provider and model for associations (file, intents, ...)
+ba35de1 for code style
+d0e85c5 Use hand-written counted loop for increase performance
+299202f Avoid use of internals getters and setters
+d7edde7 Remove synthetic-access for better access performance
+f59d49d Shell improvements
+bf8ccef Some providers + Some actions
+bffa4c3 Global actions: Properties and Refresh
+2092305 Add refresh listener to SearchActivity
+5ef30a6 Delete file/folder action
+6db02f3 Clean up
+d989421 Reload fso prior to show actions dialog
+b17fb0b ListCommand: Prevent to raise exception
+d3bb38e /etc menu is showing open and open with actions
+8b8a35f More mime/types and drawables
+acd5df9 More polished "Document" drawables
+d27cbaf New setting for "compute folder statistics" option
+47c142c Fix commands
+43610bd Add category to mime/type raw file
+cfc430e Rename certificate drawable to security
+0d5727e Use a timeout to release the exit status
+71eafe2 Mime types and drawables
+55e17ce Use a highlighted text for overflow menu
+b57215b Add show actions to list of default long-click actions
+486b163 No register long-click listener if not needed
+501b074 Use uids instead of names on chown operation
+a4c42f3 Fix default value of disk usage warning to 95
+3265a4e Initial mime types and drawables
+fd69dc5 Use unicode symbols for ascending and descending sort type menus
+515e151 New refined launcher icons
+43ffdf6 Move ActionsPolicy to ui/policy
+3ba3bf9 Fix InlineAutocompleteTextView algorithm
+26e764c Fix select/deselect of items
+ebfed76 More settings and ActionPolicy
+eb83295 Change Free Disk Space setting for more policy Disk Usage
+5f9b2d0 Remove old classes
+76b53fa Put correct values for free disk space warning
+aa5a1c9 New general settings
+0366398 New: Sort Search mode
+18c127b Clean up
+c570be2 Resolve symbolic links in search results
+1b34725 Don't return the folder of the search
+1a90d21 Add CleanSpec.mk
+bb356ae New: Setting preferences
+9f3ab76 Make selection small than status bar
+1a2f0c8 Set selection view visible for display animation effect
+bbb107e New: Selection View
+731c52e Advise of few space in DiskUsageGraph
+77158a7 Advise on mount points with < 5% of free space
+e65cfe3 Some renames
+1ed627e Various
+79268e8 Rename Identifiable to ObjectIndentifier
+61ff4d0 Synchronize actions menu dialog
+aa48187 InlineAutocompleteTextView improvements
+8560036 Fix Code Style
+4b43764 Use valueOf as ADT recommends
+0ee3238 No select the parent directory
+ea83314 Use current console
+ca71edc Fix the reexecution of commands
+cb2286a Improvements, Clean up Remove sh wrap from su (not working in JB). A simple su opens a shell DiskUsageGraph invalidate all canvas instead of rect
+b49d66f Update to CM10/JellyBean
+
+   * packages/apps/CMUpdater
+a4bf8c2 German: Fix translation
+1065716 German: Update translation
+f8b3eaa CMUpdater: Added data connection checks
+5c05b13 CMUpdater: Update Simplified Chinese Translations
+f081bf0 CMUpdater - update french translation
+c8e785b Merge "CMUpdater: New Danish strings" into jellybean
+c9dba37 Merge "CMUpdater: updated romanian translation" into jellybean
+6cd4c37 CMUpdater: updated romanian translation
+860dcee Change activity label so old branded title doesn't appear while loading
+8c7a504 Czech: fixed translation, added missing strings, revised
+fffb5e0 CMUpdater: Updated italian translation
+b3ca013 Added missing hungarian translation for CMUpdater
+ca4c3f2 Merge "Update Russian Translation-CMUpdater-CM10" into jellybean
+9f8787e Merge "CMUpdater - fix for some french translations" into jellybean
+632835a Update Russian Translation-CMUpdater-CM10
+7a2618a Remove extraneous "/" from UPDATES_FOLDER constant.
+4f15f82 CMUpdater - fix for some french translations
+8842eec CMUpdater: Updated italian translation
+c8fec20 Merge "Added Norwegian translation for CMUpdater Patch Set 2: Removed General strings." into jellybean
+33094f4 Merge "CMUpdater - french translations - initial commit" into jellybean
+6bf5473 CMUpdater: Dutch translations
+3c560bb CMUpdater: New Danish strings
+16d6e03 CMUpdater - french translations - initial commit
+ab696d3 CMUpdater:  Use a non-CM branded title in the preference screen header
+c9295f9 Merge "CMUpdater: Add translatables" into jellybean
+166efdc CMUpdater: Dutch translations
+cabe50a CMUpdater: Add translatables
+7b2fc9b CMUpdater: update headers
+666ef67 Merge "CMUpdater: initial romanian translation" into jellybean
+b821d57 Merge "CMUpdater: Dutch translations" into jellybean
+005f6a4 CMUpdater: initial romanian translation
+7ae265d CMUpdater: Dutch translations
+1e31a0c Added Hungarian translations
+2e2a274 Fix null String if user has a pre-changelog UpdateInfo
+04b1e14 CMUpdater: Updated italian translation
+8fedff0 CMUpdater: added finnish translations
+9eb091b PT-BR: Added Missing Translations + fixes
+8fe0c63 CMUpdater/TR: Add new strings
+ab1d8d0 es_ES: Initial spanish translations
+76d3ea5 CMUpdater: Simplified Chinese translation
+7ba6276 German: initial translation for CM Updater
+5ccef47 Update Russian Translation-CMUpdater-CM10
+200bd73 Update Russian Translation-CMUpdater-CM10
+e2a8af9 Merge "CMUpdater - Added Croatian translation" into jellybean
+fec352b CMUpdater: Added czech translation
+221724c Merge "CMUpdater/TR: Initial Turkish translations" into jellybean
+ab4dc17 CMUpdater: Danish translation
+942a3ce CMUpdater: Changelogs, better download handling and lots of tweaks
+8d24b6d CMUpdater: Better AsyncTask implementation
+748ae7a CMUpdater: Several fixes and better handling of tasks, connectivity etc.
+6826260 CMUpdater/TR: Initial Turkish translations
+e341622 CMUpdater: Better service binding logic and header navigation
+2376684 Merge "Added hungarian translation for CMUpdater" into jellybean
+38a4dd8 Merge "PT-BR: Added Missing Translations + fix english typo" into jellybean
+8c3b07d Merge "Added Russian Translation-CMUpdater-CM10" into jellybean
+2c4f132 Merge "CMUpdater: Added italian strings" into jellybean
+c26d871 Merge "CMUpdater: update Japanese translation." into jellybean
+3de0457 CMUpdater: Make sure destination folder exists when starting the download
+d7c01a4 Added hungarian translation for CMUpdater
+9c7c115 PT-BR: Added Missing Translations + fix english typo
+3ac5d6a CMUpdater: General code cleanup
+3b12864 CMUpdater: Added italian strings
+d56f4b6 CMUpdater: Try to improve the recovery storage mount path logic
+b317b0e CMUpdater - Added Croatian translation
+f141ffb CMUpdater: Fix up licensing notices
+cb926a5 Added Russian Translation-CMUpdater-CM10
+11b13ab Added Norwegian translation for CMUpdater Patch Set 2: Removed General strings.
+7c1fc6f CMUpdater: update Japanese translation.
+eb9fdca CMUpdate: Switch to DownloadManager, major cleanup and fixes
+bcbe964 Merge pull request #2 from DvTonder/dvt
+f05cb46 CMUpdater: Use new drawables and other fixes
+54214bc CMUpdater: Use a different API method to get up to 3 builds of each type
+55f9bfd Merge pull request #1 from DvTonder/dvt
+b09a357 CMUpdater: Reworking the UI, major cleanup and other stuff (WIP)
+28d73f4 ApplyUpdate: Remove usage of "su"
+db96dbb ApplyUpdate: Change the download location to something less generic
+2d58792 DownloadActivity: Fix recreation failure on orientation change
+58d8305 StringUtils: Compensate for jenkins timestamping
+677d2fa CMUpdater: Do not launch multiple instances of the DownloadActivity
+96e9d74 CMUpdater: Updates to main menu
+6f5a23f CMUpdater: Remove update source configuration stuff
+6452e6e CMUpdater: Remove mirror references, get.cm does its own mirror redirecting
+389a9b7 CMUpdater: Replace some strings with the appropriate "CM terminology"
+58ce582 Change parent look to Holo
+36c7f53 Get rid of unused theme stuff
+4f027c0 CMUpdater: Remove cruft
+9f81a26 CMUpdater: Initial commit for new version
+
+   * packages/apps/CMWallpapers
+57628f3 CMWallpapers: Shorten App name
+652d4ee CMWallpapers - Added Croatian translation
+e84bed3 es_ES: Added missing translations
+
+   * packages/apps/Calculator
+f09e951 Calculator: Simplified Chinese translations
+a56fa5f Czech: fixed and added translation, fixed national quotation marks
+5243a02 Calculator: Updated italian traslation
+e281d25 Added missing hungarian translations for Calculator
+2b0dfff PT-BR: Added missing translations
+f3cb2cc Calculator: Remove strings with no default translation
+9e46845 Calculator: Added missing danish translations
+bc45235 Merge "Calculator: New Features Part 2" into jellybean
+e1ae142 Calculator: New Features Part 2
+1c22e03 Calculator: Dutch translations
+5860eaa Calculator: Add german translation for new features
+a17a87b Hungarian translation for the Calculator and resizing the text on the buttons
+211b28e Merge "Update Russian Translation-Calculator-CM10" into jellybean
+9495a46 Merge "Calculator: Added missing danish translations" into jellybean
+ea5df3b Merge "Calculator: Added czech missing translation and update" into jellybean
+4a2d353 Update Russian Translation-Calculator-CM10
+8e4b763 Calculator: Added missing danish translations
+d6de219 Calculator: Added czech missing translation and update
+4cb7e3b Calculator: Updated italian translation
+8a942be PT-BR: Translations for new features
+8a43328 Calculator: New Features
+38972c8 Calculator: Delocalize mathematical function before passing to arity
+
+   * packages/apps/Calendar
+ed8b229 Add Recife timezone (2/2)
+e608176 Czech: translation corrections
+964980d Possible NPE in AllInOneActivity
+948aa8d Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/packages/apps/Calendar into aosp-merge
+3ca997a Calendar: Enable the LED for calendar alerts
+fcb11de Merge branch 'jb-release' of https://android.googlesource.com/platform/packages/apps/Calendar into aosp
+02fd982 Modify doScroll to move based on the average of the touch points
+1986025 Calendar: Revert change 21116
+
+   * packages/apps/Camera
+8c22016 Reset Camera to Defaults Crashes Camera App
+c948f5c Czech: corrected translation
+d01033e Merge "Camera: Dutch translations" into jellybean
+841523b Merge "Camera - update french translations" into jellybean
+3a2c542 Camera: Dutch translations
+00f2665 Camera - update french translations
+3d8dca7 Camera : PowerShutter fixes
+e819d31 Merge "Increase the aspect ratio tolerance" into jellybean
+17be2a7 Camera : Fix Ignore keyevents
+b9fed35 Increase the aspect ratio tolerance
+16e0d9c Camera : Ignore keyevents when in gallery
+28d7614 Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/packages/apps/Camera into aosp-merge
+bac641b camera: add picturesize entries for sony exmor r
+3bff126 Merge "es_ES: Added and fixed spanish translations" into jellybean
+bf93699 Camera: Added czech missing translation and update
+cefd484 Merge "Camera: Simplified Chinese Translations" into jellybean
+483b1f4 Merge "Update Russian Translation-Camera-CM10" into jellybean
+3f2291b Merge "Camera: Added czech missing translation" into jellybean
+e4b1a5f Merge branch 'jb-release' of https://android.googlesource.com/platform/packages/apps/Camera into aosp
+115d718 Camera: Prevent double-stops on preview for some HALs
+e77c223 Update Russian Translation-Camera-CM10
+7b9ddf9 Camera: Fix issue with restore default camera parameters
+285b1c5 Merge "Camera : handle long press on VOL +/- to zoom IN/OUT" into jellybean
+5086e6c Merge "Camera: Danish translation new strings" into jellybean
+96fd026 Merge "Camera: Dutch translations" into jellybean
+a8ce771 Merge "Added missing hungarian translations" into jellybean
+e7572a9 Merge "Camera - Added missing Croatian translation" into jellybean
+091be6b Merge "PT-BR: Added Missing Translations" into jellybean
+4f5374d Merge "Camera: Updated italian translation" into jellybean
+1cf439e Camera: Added czech missing translation
+f689147 Camera: Danish translation new strings
+c85a449 Camera : handle long press on VOL +/- to zoom IN/OUT
+e097553 Camera: Simplified Chinese Translations
+1dab65d es_ES: Added and fixed spanish translations
+4854749 Added missing hungarian translations
+bb9b2f1 Camera: Updated italian translation
+f515e21 Camera - Added missing Croatian translation
+28db72e PT-BR: Added Missing Translations
+ddb4d63 Camera: Dutch translations
+4b5b0cb Update Russian Translation-Camera-CM10
+d3ab3d9 Camera: streamline settings
+3b9adc7 Merge "Camera: Dutch translations" into jellybean
+13f47f4 Camera: Add JPEG Quality settings. Patchset 2: remove comment.
+32ab10d VideoCamera: Do not use continuous autofocus in time-laspe mode
+4d1c15a Camera: Add volume key to control the zoom in/out. I will make my phone in lanscape when I take picture or capture video. I feel it very not easy to adjust the picture zoom size by touch the screen, because the take picture button in the right side. The finger in the left hand is easy to push the volume key, so I make the volume key up/down as the zoom out/in.
+e57c3e6 Camera: Dutch translations
+93fea4b Camera : Timer Snapshot
+99170ad Camera: add burst mode (up to 20 shots) Rebased for jellybean.
+0aedc3e Camera: Touch Focus Duration Translations (Simplified Chinese/English)
+ecb941d Revert "Camera: Add pinch to zoom"
+2334935 Merge "es_ES: Added missing translations" into jellybean
+06d9c66 Fix camera extra settings menu
+b96da5c es_ES: Added missing translations
+783c3ea Merge "Camera: Add pinch to zoom" into jellybean
+ef0f9d8 Camera: Add pinch to zoom
+b2d1712 Merge "Update Russian Translation-Camera-CM10" into jellybean
+
+   * packages/apps/CellBroadcastReceiver
+bfc4827 Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/packages/apps/CellBroadcastReceiver into aosp-merge
+0d9423a Merge branch 'jb-release' of https://android.googlesource.com/platform/packages/apps/CellBroadcastReceiver into aosp
+
+   * packages/apps/CertInstaller
+9f3bb68 Czech: revised, fixed strings
+
+   * packages/apps/Contacts
+4452f97 Dialer : Fix T9 add to contacts
+5a6b835 Merge "Contacts: Simplified Chinese Translations" into jellybean
+998369d Czech: fixed translation
+dbff7a3 Contacts: Simplified Chinese Translations
+e4f5e04 Contacts: Fix T9 crash in Chinese.
+d70fbfd Added missing hungarian translation for t9_loading
+2f68c14 Czech: added missing national characters
+ce754cd Also search nickname and organization in T9 search.
+c242700 Cleanup and improve T9 search code.
+dbf9e9f Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/packages/apps/Contacts into aosp-merge
+a8cf318 Add T9 search support in Chinese
+735b2df Merge "fix Caller name disp not sticking for missed calls" into jellybean
+65f1e76 Merge "Contacts: Added czech missing translation and update" into jellybean
+d50c3ef fix Caller name disp not sticking for missed calls
+6c39da5 Contacts: Added czech missing translation and update
+7043edd Contacts: updated romanian translation
+8c29ca9 Fix: Missing color reference in layouts
+cc781c4 Merge "Contacts: Updated italian translation" into jellybean
+be60d06 Merge "Add lookup in Call logs to lookupNumber" into jellybean
+6ebc2b4 Allow full theming of Contacts via theme chooser
+bfebf40 Contacts: Updated italian translation
+4ca0247 Merge "Contacts: Add Chinese translation" into jellybean
+6d5b575 Contacts: Add Chinese translation
+5ead1ed Contacts: Missing Danish translation
+6da835d Merge "Contacts: Dutch translations" into jellybean
+8f72bf8 Merge "Update Russian Translation-Contacts-CM10" into jellybean
+36a504a Merge "Added hungarian translation for Unknown Call Type" into jellybean
+39f41b1 Added hungarian translation for Unknown Call Type
+394f521 Contacts: Dutch translations
+6c38d2f Update Russian Translation-Contacts-CM10
+ef58fde PT-BR: Translation for Unknown Call
+0baa781 Add lookup in Call logs to lookupNumber
+c9db37c Add Unknown Call Type to call logs
+bc7e647 Merge "Contacts: Fix hebrew characters in dialer" into jellybean
+31d8676 Contacts: Fix dialpad image for korean. It's my mistake. One xhdpi image has not transparent background. Changed that image to transparent background, and permissions of image files.
+08cae6d Contacts: Fix hebrew characters in dialer
+880c19f Merge "Contacts: Fix broken export-to-storage function" into jellybean
+4dfc8c0 Contacts: Fix broken export-to-storage function
+
+   * packages/apps/DSPManager
+c591346 es_ES: Added and modified spanish translations
+347eab9 DSPManager: Dutch translations
+1693e01 DSPManager : Added French missing translation
+4688bad DSPManager overrides compiling MusicFX
+4abf7cd Add French missing translation
+97fb900 Update Russian Translation-DSPManager-CM10
+5c809d2 DSPManager: Added danish translation for "What is DSPManager?"
+7c8ce07 Merge "DSPManager: romanian translation" into jellybean
+26af948 DSPManager: romanian translation
+ecd92a5 DSPManager: Minor corrections of the danish translation
+5c932d9 es_ES: Added missing translations
+3214e7b Merge "DSPManager: Dutch translations" into jellybean
+468e732 DSPManager: Dutch translations
+
+   * packages/apps/DeskClock
+725f3b8 DeskClock: update czech translation
+2e20c96 DeskClock : Fix French translate
+0a4b832 Merge "Revert "es_ES: Added new translations"" into jellybean
+6052191 Revert "es_ES: Added new translations"
+497b9ee DeskClock: Updated czech translation
+741499b Merge "es_ES: Added new translations" into jellybean
+2caef92 es_ES: Added new translations
+669ac5d Add French missing translation
+9d6d727 Call to equals() comparing different types
+d2d2bc2 Set untranslatable string values
+49fc5a7 Merge "es_ES: Corrected wrong translations" into jellybean
+812ce14 es_ES: Corrected wrong translations
+ebeb603 DeskClock: update Japanese translation.
+8c443d4 DeskClock - Updated Croatian translation
+f6ab065 Merge "Fix / before ' breaking the build" into jellybean
+f394155 Merge "PT-BR: Add Stopwatch & Countdown Translations + fix 23301" into jellybean
+3f35d85 Merge "DeskClock: Dutch translations" into jellybean
+0e7858c Fix / before ' breaking the build
+9d9b093 Merge "DeskClock: Added missing danish translations" into jellybean
+d6c68c6 Merge "Update Russian Translation-DeskClock-CM10" into jellybean
+16cd185 Merge "DeskClock: Updated italian translation" into jellybean
+63c8820 Merge "Added hungarian translation for Stopwatch & Countdown" into jellybean
+d869eab Merge "deskclock: updated finnish translations" into jellybean
+2ac7ccd DeskClock: Dutch translations
+5b31519 DeskClock: Added missing danish translations
+57bf68a DeskClock: Updated italian translation
+4d8fe9d Added hungarian translation for Stopwatch & Countdown
+40192e8 Merge "Add Chinese translations for Stopwatch & Countdown" into jellybean
+01ed472 Merge "German: Tranlation for countdown & stopwatch timers" into jellybean
+abab6c1 Merge "es_ES: Added translations for Countdown and Stopwatch" into jellybean
+f3625f1 Merge "DeskClock: Updated italian translation" into jellybean
+fed3136 Add Chinese translations for Stopwatch & Countdown
+ae6a0c8 German: Tranlation for countdown & stopwatch timers
+05b9e59 DeskClock: Fix pending bugs
+d63143c PT-BR: Add Stopwatch & Countdown Translations + fix 23301
+9794cfb es_ES: Added translations for Countdown and Stopwatch
+10dcd60 deskclock: updated finnish translations
+fadee32 Update Russian Translation-DeskClock-CM10
+f2903e3 DeskClock: Updated italian translation
+e40b32f Request 5936: Stopwatch & Countdown
+ef4c1a8 Merge "Update Russian Translation-DeskClock-CM10" into jellybean
+f214e72 Update Russian Translation-DeskClock-CM10
+488875e DeskClock: Simplified Chinese Translations
+afa2671 Merge "German: Missing translations for DeskClock" into jellybean
+3bf4e91 es_ES: Added missing translations
+4f68840 Merge "DeskClock: Dutch translation fixed" into jellybean
+8a5f824 DeskClock: Dutch translation fixed
+
+   * packages/apps/Email
+5f04488 Update Dutch translation
+ec1ccb2 Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/packages/apps/Email into aosp-merge
+12bed3a Email - Added missing Croatian translations
+e38fc80 Merge "Email: Fix another Swedish translation" into jellybean
+5307c06 Merge branch 'jb-release' of https://android.googlesource.com/platform/packages/apps/Email into aosp
+07fa32f Email: Fix another Swedish translation
+e0c1550 Email: Correct swedish translation
+10e5166 Merge "es_ES: Fixed translations" into jellybean
+7a7ca1c Email: Revert change 21113
+df9f077 es_ES: Fixed translations
+
+   * packages/apps/Exchange
+cb857ce Exchange: Dutch translations
+658a721 Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/packages/apps/Exchange into aosp-merge
+
+   * packages/apps/Gallery
+5b973f3 Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/packages/apps/Gallery into aosp-merge
+
+   * packages/apps/Gallery2
+53d53cf Added system to build LegacyCamera if specified
+6430623 Revert "Added system to build LegacyCamera if specified"
+dd9c5ca Added system to build LegacyCamera if specified
+3c72720 Added missing hungarian translation
+979406f Gallery2: Updated italian translation
+db30b3b Gallery2: Fix hard code message.
+773a672 Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/packages/apps/Gallery2 into aosp-merge
+830908e Merge branch 'jb-release' of https://android.googlesource.com/platform/packages/apps/Gallery2 into aosp
+ae04537 Do not accept fling gesture after we changed from/to filmstrip mode.
+
+   * packages/apps/KeyChain
+ac55e35 KeyChain: Added Norwegian translations
+
+   * packages/apps/LegacyCamera
+4213799 Make LegacyCamera seamlessly compile into Gallery2 like the normal Camera
+7c7ef4b Merge "LegacyCamera: Load correct panorama JNI libs" into jellybean
+9af9d0c LegacyCamera: fix for gallery crash @boot when using LegacyCamera
+2595607 Add support for Panorama mode and fix colors
+773f6f9 Move PanoramaActivity to root folder
+0c75fe5 CameraLegacy: add support for all camera resolutions
+5791db8 LegacyCamera: Load correct panorama JNI libs
+
+   * packages/apps/Mms
+fa96c42 Merge "Mms: Updated italian translation" into jellybean
+4a91902 Mms: Updated italian translation
+2356ea0 Added missing hungarian traslation
+1edf0be Merge "German: Update translation" into jellybean
+e42bee9 Merge "PT-BR: Added missing translations" into jellybean
+22324a9 German: Update translation
+db7eab8 Mms: Simplified Chinese Translations
+fc21f0d PT-BR: Added missing translations
+3edaebf QuickMessage: Auto display soft keyboard on quick reply and other tweaks
+94ba83d Mms auto-retrieval (2/2): mms app
+0218495 Messaging and QuickMessage: Fix Keyboard type handling
+6628297 Mms: updated Czech translation
+596a4cb Merge "Resubmit "QuickMessage: Re-arrange the preferences to be more readable"" into jellybean
+76b12cc Merge "Revert "Mms: Fixes mms automatic retrieval (1/2)"" into jellybean
+5a0e80f Revert "Mms: Fixes mms automatic retrieval (1/2)"
+a675b66 Resubmit "QuickMessage: Re-arrange the preferences to be more readable"
+56f3b46 Merge "Revert "QuickMessage: Re-arrange the preferences to be more readable"" into jellybean
+fca554b Revert "QuickMessage: Re-arrange the preferences to be more readable"
+247c54d Merge "Mms: Fixes mms automatic retrieval (1/2)" into jellybean
+66fd92b Merge "Mms: sets endMmsConnectivity() as last operation" into jellybean
+3364f5a Merge "QuickMessage: Re-arrange the preferences to be more readable" into jellybean
+8d9711d Mms: Fix French translation
+51c7edf Mms: Dutch translations
+700623c Merge "Added hungarian translation for menu_add_to_calendar settings" into jellybean
+2b385a3 QuickMessage: Re-arrange the preferences to be more readable
+1a5de51 Mms: Fixes mms automatic retrieval (1/2)
+46fe80b Merge "PT-BR: Added missing translation" into jellybean
+101db26 Mms: sets endMmsConnectivity() as last operation
+eae3201 Merge "Update Russian Translation-Mms-CM10" into jellybean
+7576a6c Merge "Mms: Updated italian translation" into jellybean
+147a23c Mms: Simplified Chinese translations
+912ebba Update Russian Translation-Mms-CM10
+7d81a47 Added hungarian translation for menu_add_to_calendar settings
+56329f6 Mms: Updated italian translation
+20c8e68 PT-BR: Added missing translation
+b09db7f Merge "Mms: Add new feature 'Add SMS to Calendar remind'." into jellybean
+b485025  Mms: Fix not on the screen in some cases.
+2e7e1bd Mms: Add new feature 'Add SMS to Calendar remind'.
+79bc212 Merge "Mms: Updated italian translation" into jellybean
+069aea0 Fix cropping on MMS inline thumbnails
+89cd5d2 Mms: Updated italian translation
+1bac1af QuickMessage: preserve reply text on "View" press
+fa8974d mms: updated finnish translations
+4092cfe Mms: adds the option to hide sprints vm text messages, but still allows sprints vvm to receive messages.
+56cf40a QuickMessage: Performance tweak
+0ed07cb German: Add missing strings
+1f4d3c5 PT-BR: Added Missing Translations
+dcf622a Allow full themeing of mms via theme chooser
+553ac8e FR: Update Translations MMS App
+5b4efd9 Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/packages/apps/Mms into aosp-merge
+dea26df QuickMessage: Prevent the screen from locking while user is typing
+a38e074 QuickMessage: Fix screen relocking on 'View' after auto unlock
+5c8cfd7 Mms: Make Quickmessage cursor visible in "light theme"
+87f3d09 Mms: Fix deprecation
+7d9a361 Merge "Mms: Set the proper API versions" into jellybean
+4676cc1 es_ES: Added translations for recent options
+b0cc557 Mms: Remove untranslatable strings
+ffa9457 Merge "Mms - Added missing Croatian translations" into jellybean
+9f011d7 Merge "Added hungarian translation for soft keyboard settings" into jellybean
+52f7972 Merge "MMS: Danish soft keyboard strings" into jellybean
+2bb8855 Mms - Insert Emoji and Smiley at Cursor position
+ba330c4 Mms: Set the proper API versions
+705c676 Prevent QuickMessage popup when Mms is active application
+2899095 Mms:  Prevent QuickMessage popup force closing when receiveing Mms
+abe80cc Mms - Added missing Croatian translations
+9f2035c MMS: Danish soft keyboard strings
+1fab32d Added hungarian translation for soft keyboard settings
+090abfc Mms: added the option to change the soft keyboard type when composing messages
+2d780bc Mms: updated romanian translation
+8b46d86 Merge "PT-BR: MAP Desc. Translation" into jellybean
+b07aa13 Merge "Mms: Add Chinese translations" into jellybean
+f7bcf40 Merge "Update Russian Translation-Mms-CM10" into jellybean
+e578fe8 Merge "Mms: Updated italian translation" into jellybean
+3da7ed6 Merge "Added hungarian translation for push mms" into jellybean
+4871354 Merge branch 'jb-release' of https://android.googlesource.com/platform/packages/apps/Mms into aosp
+4f723eb Update Russian Translation-Mms-CM10
+59e1844 Added hungarian translation for push mms
+83c24c5 Mms: Updated italian translation
+0f7ce71 Ported: Bluetooth Message Access Profile (MAP) from CM9
+4e8781b PT-BR: MAP Desc. Translation
+4d3e25f Mms: Updated italian translation
+8ee916a Merge "PT-BR: Add Dark Theme Translation" into jellybean
+5ba9184 Merge "Added missing hungarian translations" into jellybean
+d1c9e48 Merge "Mms: Dutch translations" into jellybean
+947b0e4 Use fallback MMS attachment name if can’t create file with received name
+cfb2148 Merge "Update Russian Translation-Mms-CM10" into jellybean
+4c9aee1 Merge "Mms: Update translatables" into jellybean
+447523f Merge "mms: updated finnish translations" into jellybean
+2685020 Mms: Add Chinese translations
+a82188c Added missing hungarian translations
+a1586a0 Mms: Dutch translations
+d172ec3 Mms: Update translatables
+87bd11e Update Russian Translation-Mms-CM10
+d6344e6 Mms: updated romanian translation
+a725613 Underp translation
+58188ca PT-BR: Add Dark Theme Translation
+25ed918 Merge "QuickMessage: Add theme, Smiley, Emoji, Strip unicode and date support" into jellybean
+50008ac Merge "Mms: Updated italian translation" into jellybean
+af8a402 Merge "MMS: Danish QuickMessage translation update" into jellybean
+98c922f Merge "Mms: Dutch translations" into jellybean
+b44f0fa Merge "PT-BR: Added Template Translation" into jellybean
+8d6b985 Merge "Updated Polish translation" into jellybean
+9c4800e QuickMessage: Add theme, Smiley, Emoji, Strip unicode and date support
+8cd4d4e MMS: Danish QuickMessage translation update
+715dd63 PT-BR: Added Template Translation
+6579a11 Mms: Dutch translations
+7a7a8a6 QuickMessage: Cleanup, optimization and bug fixes
+0fe8040 Updated Polish translation
+e513a2e Mms: Updated italian translation
+ffca0e9 Merge "QuickMessage: Only display template button if templates defined (3 options)" into jellybean
+7ade1a8 QuickMessage: Fix display of main app UI and remove from recents menu
+ec84a6a QuickMessage: Only display template button if templates defined (3 options)
+9db2645 Merge "Mms: Add Template support to QuickMessage pop-up" into jellybean
+1bfcb1b Merge "Update Russian Translation-Mms-CM10" into jellybean
+6978d84 Mms: Add Template support to QuickMessage pop-up
+ce734bb Merge "es_ES: Added missing translations" into jellybean
+68f3615 Merge "Added hungarian translation for Quick reply and remove whitespace" into jellybean
+d9f0a0c Merge "PT-BR: Add QuickMessage Translation" into jellybean
+eeb136e Update Russian Translation-Mms-CM10
+9ff66be Rearrange MMS notification actions
+8f8659c Added hungarian translation for Quick reply and remove whitespace
+84f26dd es_ES: Added missing translations
+d5b90b9 Fix drawable name on mdpi
+8b31f9e Mms: Add 'Quick reply' notification action
+080beb1 Revert Mms vibrate logic change 21112
+b7f70c3 PT-BR: Add QuickMessage Translation
+c892811 Merge "Mms: Updated italian translation (added QuickMessage feature)" into jellybean
+0b75272 Mms: Updated italian translation (added QuickMessage feature)
+50228a7 Added hungarian translation for Quick message
+99acdeb MMS: Remove Quick Message public API change (2/2)
+4f2cdcb Merge "Mms: Missing Danish strings and a few corrections" into jellybean
+a996eb7 MMS: Replace emojis with Android-style ones
+a02a6d3 Mms: Missing Danish strings and a few corrections
+ac07a98 Mms: Add Quick Message Support (1/2)
+
+   * packages/apps/Nfc
+3d402b5 Nfc: Dutch translations
+323beb6 Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/packages/apps/Nfc into aosp-merge
+f08a77e on handsets where Gwallet is enabled, HCE turns off for good after Gwallet is fired up.  This patch fixes the scenario of Gwallet and HCE living happily together.  it is a fix, really, for the intended function of when an HCE application is in the forground, it has control, all other times Gwallet gets control of emulation from SE.
+8efb854 Merge "card emulation patch port to JB" into jellybean
+
+   * packages/apps/Phone
+b455ae4 Fix for NPE in BluetoothSMSAccess
+399da46 Phone: fix broken translation
+abb96ed Merge "Phone : Added missing French translation" into jellybean
+9520f1f Merge "Phone: updated Czech translation" into jellybean
+b858b6a Phone : Added missing French translation
+4adbf1e Phone: updated Czech translation
+9998611 Phone: update German translations
+44b7587 Phone: Simplified Chinese translations
+b6fdce4 Merge "Deleted extra translations" into jellybean
+05e8b87 Merge "Phone: Dutch translations" into jellybean
+36e03a6 Phone: Dutch translations
+4a916e2 Deleted extra translations
+cb47b58 es_ES: Added new translations
+e817bba Update Russian Translation-Phone-CM10
+78f3096 Merge "Update Russian Translation-Phone-CM10" into jellybean
+819c0d4 Merge "Fix call end vibration." into jellybean
+34945f1 Merge "Phone: New Danish strings" into jellybean
+ce6ff7a Merge "Phone: Updated italian translation" into jellybean
+21eb9d0 Merge "Phone: updated romanian translation" into jellybean
+5e71e8d Fix call end vibration.
+34707dc Phone: Updated italian translation
+5b32aa9 Phone: updated romanian translation
+27ae251 Update Russian Translation-Phone-CM10
+47da3ae Added missing hungarian translation
+c24c715 Phone: New Danish strings
+093b3b4 Merge "PhoneApp: Option to not lock automatically when a call ends (2/2)" into jellybean
+b7f11e9 Phone: Danish strings for proximity sensor
+6d95cfb Support GSM AT commands for SMS over bluetooth (2/2)
+461a0d2 PhoneApp: Option to not lock automatically when a call ends (2/2)
+1d7b7b2 Phone: Update czech translation
+10f1482 Merge "Phone: updated romanian translation" into jellybean
+750277c Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/packages/apps/Phone into aosp-merge
+5c33af5 Phone: updated romanian translation
+4bbcf92 Merge "Update Russian Translation-Phone-CM10" into jellybean
+a1d5435 Added hungarian translation for proximity sensor settings
+991aa40 Update Russian Translation-Phone-CM10
+5af08ec fix occasional ring volume reset take2
+e92b38f fix occasional ring volume reset
+1324130 Merge "Phone: Updated italian translation" into jellybean
+357d2c6 Phone: updated romanian translation
+78c7552 Phone: Updated italian translation
+1451628 Phone: Remove strings without default translation
+7b31f43 PhoneApp: New in call proximity sensor option
+2b5a3f4 Phone: Prevent immediate screen-off after call-answer
+fa2b5a8 Phone: Disable accelerometer sensor while in-call and screen UI is off
+bc1c026 Merge "Fix incall touch UI" into jellybean
+4e09888 Merge "Phone: Simplified Chinese Translations" into jellybean
+33da980 Merge "PT-BR: Fix based on commit 23113" into jellybean
+79c17f8 Merge "es_ES: Clean up Advanced settings strings" into jellybean
+ed6655f Merge "Phone: Updated italian translation" into jellybean
+e86f7ba Merge "Update Russian Translation-Phone-CM10" into jellybean
+370b9a6 Fix incall touch UI
+ffc7e2f es_ES: Clean up Advanced settings strings
+bdfdb63 Phone: Updated italian translation
+c4aafa0 PT-BR: Fix based on commit 23113
+4eeda5e Merged german translations for national data roaming from ics
+bb3740a Merge "Phone: updated french translation" into jellybean
+33e0e98 Merge "Phone: updated romanian translation" into jellybean
+8063618 Update Russian Translation-Phone-CM10
+c424092 Phone: Simplified Chinese Translations
+70f7ab7 Phone: Clean up Advanced settings strings and layout
+093d7ce Phone: updated romanian translation
+00a78ff Merge "Phone: Updated italian translation" into jellybean
+863150c Merge "Update Russian Translation-Phone-CM10" into jellybean
+36255b7 Adding contextual "Voice Mail" text to in-call dialpad.
+5a1fd4f Merge "German: Add missing strings" into jellybean
+51296dc Phone: Updated italian translation
+7c42065 Phone: updated french translation
+3c3abf4 Update Russian Translation-Phone-CM10
+8bdac42 Merge "Phone: Simplified Chinese Translations" into jellybean
+d110bb0 Merge "PT-BR: National Data Roaming Translation + fixes" into jellybean
+7f2ceb2 Merge "es_ES: Added missing translations" into jellybean
+ab301b4 Merge "Phone: Missing Danish translations" into jellybean
+d689bb7 German: Add missing strings
+80f69cd Phone: Simplified Chinese Translations
+37db81a es_ES: Added missing translations
+67659ee Make "Preferred network mode" strings consistent, fix LTE modes.
+c976d54 PT-BR: National Data Roaming Translation + fixes
+6e39cae Merge "Phone: Updated italian translation" into jellybean
+97cd454 Merge "Added hungarian translation for national data roaming (and english correction)" into jellybean
+ee687e9 Phone: Missing Danish translations
+f5f276c phone settings: do not present duplicate operators to the user
+e119225 packages/apps/Phone: squashed clean up of NetworkSettings from CAF
+041b71e Phone: Updated italian translation
+b6fa062 Added hungarian translation for national data roaming (and english correction)
+382b8a8 Port national data roaming from CM9 (2/2)
+6ed40cf Forward porting CM7/CM9 Advanced Phone Settings
+
+   * packages/apps/QuickSearchBox
+1229922 QuickSearchBox: Fix NPE if Google Apps not installed
+
+   * packages/apps/Settings
+f4b540b Merge "Settings: Simplified Chinese translations" into jellybean
+4097a75 fix typo, lowercasing
+40028c8 Merge "Setting : Added missing French translation" into jellybean
+863d720 Settings: Simplified Chinese translations
+f105e02 Setting : Added missing French translation
+e9a7893 Merge "Added hungarian translation for stylus gestures features" into jellybean
+d6bf27a Settings: Fix code formatting derp
+4628508 Added hungarian translation for stylus gestures features
+23fe64c Merge "PT-BR: Added missing translations" into jellybean
+d02432d Merge "Settings: romanian translation - updated and changed some strings Signed-off-by: Igor <igor_sorocean@hotmail.com>" into jellybean
+dcd6859 Merge "Disable Automatic brightness checkbox if automatic brightness is not available" into jellybean
+b8acad6 Merge "Settings: Fix stylus gestures settings and related NPE" into jellybean
+035f81c Settings: Fix stylus gestures settings and related NPE
+a901211 Settings: romanian translation - updated and changed some strings Signed-off-by: Igor <igor_sorocean@hotmail.com>
+a08989a Disable Automatic brightness checkbox if automatic brightness is not available
+c911ca3 Settings: Updated italian translation
+7088c61 Merge "Settings: update German translaions" into jellybean
+e40a1c5 Merge "Settings: updated romanian translation and fixed duplicate strings" into jellybean
+0ef2520 Merge "Settings: Added missing danish translations" into jellybean
+8b8b1ed4 Settings: update German translaions
+c7b1ba0 Settings: Added missing danish translations
+168b2b4 Update Russian Translation-Settings-CM10
+4b2d14a Settings: updated romanian translation and fixed duplicate strings
+75a7fc7 PT-BR: Added missing translations
+b81a34a German: Update german translation
+8e37308 Settings: added missing Czech translations
+f81fd68 Add Recife timezone (1/2)
+67b6d28 Added hunngarian translation for lockscreen settings
+75b6b46 UMS support with any volume, not only primary (3/3)
+b3d8505 Stylus gestures features (2/2)
+0057248 Fix switching running/cached apps with memory bar
+566aa89 Settings: Updated italian translation
+f4bba87 Wi-Fi: Region Code: Added Brazil (code BR: 25)
+b38a88f Merge "Settings: Updated italian translation" into jellybean
+6c9fabd Merge "Settings: Simplified Chinese translations" into jellybean
+08bb824 Merge "Settings - add missing french translations" into jellybean
+22ca4b2 Merge "Settings: Added missing danish translations" into jellybean
+c1a526d Settings: Updated italian translation
+9d07466 Merge "Settings: Dutch translations" into jellybean
+aba809b Merge "Added hungarian translation for expand desktop settings" into jellybean
+e40130c Settings: Simplified Chinese translations
+130722e Merge "es_ES: Added more translations" into jellybean
+43beef9 Merge "Settings: Updated italian translation" into jellybean
+abceca3 Settings: Dutch translations
+92abe47 Settings - add missing french translations
+f6277be Settings: Updated italian translation
+ee8ab52 es_ES: Added more translations
+fb8c385 Merge "Settings - update french translation for CMUpdater" into jellybean
+95c8426 Update Russian Translation-Settings-CM10
+8b2a7f2 LockScreen: allow long-press actions from hardware keys (2/2)
+268c3db Settings: Use a better descriptor for the sound power menu item
+5a37562 Settings - update french translation for CMUpdater
+50d9b04 PT-BR: Added missing translation(s)
+fba1da9 Added hungarian translation for expand desktop settings
+e687ad6 Merge "Update Russian Translation-Settings-CM10" into jellybean
+49b0aaf Merge "Settings: Simplified Chinese translations" into jellybean
+dca8f31 Merge "es_ES: Added new translation" into jellybean
+67f8d01 Settings: Fix capitalization
+06a5842 Settings: Simplified Chinese translations
+0250e6d Update Russian Translation-Settings-CM10
+6fc16ba es_ES: Added new translation
+16a0b15 Settings: Added missing danish translations
+5a64970 Allow to hide Expanded Desktop (1/2)
+5325969 Merge "Added missing hungarian translation" into jellybean
+39d8925 Merge "es_ES: Added new translations" into jellybean
+5ad404b Merge "PT-BR: Added missing translations" into jellybean
+8bfcf34 Merge "Settings: Updated italian translation" into jellybean
+6688d13 Merge "German: Update translation" into jellybean
+ab891b7 Merge "Update Russian Translation-Settings-CM10" into jellybean
+1f0e16f Changed the way that date format selector is shown (revision)
+121da33 German: Update translation
+9877970 PT-BR: Added missing translations
+6717633 es_ES: Added new translations
+df74c25 Settings: Updated italian translation
+3bb7353 Changed the way that date format selector is shown
+b29d881 Added missing hungarian translation
+ac558e0 Merge "Call to equals() comparing different types" into jellybean
+d7dbf32 Call to equals() comparing different types
+69d6325 Merge "PowerWidgetUtil: Remove flashlight as a default button" into jellybean
+9f630a9 Allow airplane and silent power toggle (1/2)
+7103801 Merge "App manager: Enable fast thumb scrolling" into jellybean
+4f20306 Settings: Dutch translations
+616724e App manager: Enable fast thumb scrolling
+81c4258 German: Update translation
+997beba Update Russian Translation-Settings-CM10
+ea92641 Merge "Inconsistent "Security" label size when adding a WiFi network" into jellybean
+ce484c1 settings: Add home button unlock option (2/2)
+c74b7bc Inconsistent "Security" label size when adding a WiFi network
+da21d00 Fixed non translatable values
+cc5d5d2 Merge "Update Russian Translation-Settings-CM10" into jellybean
+3682687 Merge "Settings: Added danish translations for SMS security limit" into jellybean
+67ef5e9 Merge "Settings: Updated italian translation" into jellybean
+3ec75ca Merge "PT-BR: Added missing translations" into jellybean
+f7ad67e Merge "Settings: Dutch translations" into jellybean
+a3b2e82 Update Russian Translation-Settings-CM10
+9499885 Settings: Added danish translations for SMS security limit
+9025848 Settings: Updated italian translation
+3460e5b PowerWidgetUtil: Remove flashlight as a default button
+8bbbc1c PT-BR: Added missing translations
+3f18972 Settings: Dutch translations
+7b4ca1b Added missing hungarian translations
+d777584 Settings: Fix typo (SMS Security limit)
+432ee7d Settings (Status Bar): Dedup strings
+f15e835 Fix "always on" state for the LED.
+bc73360 Add CmCircleBattery to StatusBar options (2/2)
+bc0701d Fix developer's lazieness
+1218d60 Settings: Add setting in security for sms message rate alerts
+4603bef Settings: Updated italian translation
+f2127e6 And more..
+1098828 Fix more translation breakage :(
+3670208 Update Russian Translation-Settings-CM10
+141b03f Settings: Added danish translations for dock settings
+ea6f4d6 Settings: German translation for mock sms & cleanup
+67c50bc Settings - Added missing Croatian translations
+46afdb0 Settings: Added missing czech translations for arrays and update
+36f6d66 NotificationLightSettings: Use config.xml provided default LED colors and on/off times.
+676fef1 Added hungarian translation for cmupdate and dock settings
+51373a7 Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/packages/apps/Settings into aosp-merge
+7e81463 Revert "ProfilesSettings : Don't reinstantiate"
+486d225 Merge "Hide updater in settings if package not installed" into jellybean
+07d0640 Merge "es_ES: Added new translations" into jellybean
+5dcad0e Merge "PT-BR: Added Missing Translations" into jellybean
+03129ff Merge "Update Russian Translation-Settings-CM10" into jellybean
+0b54e5e Merge "Settings: Updated italian translation" into jellybean
+8e5af28 Merge "German: translation of new CM Updater strings" into jellybean
+ef0c141 Merge "Settings: update Japanese translation." into jellybean
+da33bd3 Merge "Settings: Add and update czech translation" into jellybean
+926e685 Merge "Setting/TR: Add new translations" into jellybean
+170fdc6 Settings: Dock settings features and cleanup
+e1da9a6 Merge "Settings: Added danish translations for CM-updater" into jellybean
+699b2e0 Merge "Added hungarian translation for allow_mock_sms settings" into jellybean
+109bb4a FILL_PARENT is deprecated since API Level 8 replace it with MATCH_PARENT
+d8b4a1c Merge "Allow localization for lockscreen rotation summary" into jellybean
+fc3f4a3 es_ES: Added new translations
+5122bbb PT-BR: Added Missing Translations
+1cdb4fa Allow localization for lockscreen rotation summary
+b2a8a4a Fix capitalization of CyanogenMod statistics
+e045d79 Settings: update Japanese translation.
+fe67f05 Settings: Updated italian translation
+af9e9af German: translation of new CM Updater strings
+fe2aaa8 Setting/TR: Add new translations
+7a9e2c7 Settings: Added danish translations for CM-updater
+345637a Hide updater in settings if package not installed
+793cc01 Update Russian Translation-Settings-CM10
+6c0bb52 Settings: Add the OTA updater
+3218d3a Merge "Revert "Settings: updated romanian translation" Duplicate strings, breaking build" into jellybean
+605b20a Revert "Settings: updated romanian translation" Duplicate strings, breaking build
+9b69cb6 Merge "PT-BR: Translations for SMS Mock" into jellybean
+a7e3bfe Merge "Settings: Updated italian translation" into jellybean
+d2ff401 Merge "Settings: updated romanian translation" into jellybean
+c736674 Added hungarian translation for allow_mock_sms settings
+9b68663 Settings: updated romanian translation
+d71ab7a Settings: Updated italian translation
+cebf525 Settings: Minor corrections and a few additions to the danish translation
+eadd107 Settings: Add and update czech translation
+ac2c451 Merge "Settings: Fix Swedish translations" into jellybean
+378241d Merge "Update Russian Translation-Settings-CM10" into jellybean
+c24d540 Merge "Fix different sized buttons in app info & lightlevel setting" into jellybean
+33aca6f settings: Allow Mock SMS (2/2)
+06f32dd Settings: Hide storage devices with removed status
+9a296a6 Merge "Settings: Updated italian translation" into jellybean
+0be4472 Merge "Added missing hungarian translations" into jellybean
+ba15cd1 Merge "Settings: Added missing danish translation" into jellybean
+ad11fb1 Merge branch 'jb-release' of https://android.googlesource.com/platform/packages/apps/Settings into aosp
+5a7d958 Settings: Fix Swedish translations
+faa6932 PT-BR: Translations for SMS Mock
+23a3ed1 Fix different sized buttons in app info & lightlevel setting
+2532cd7 Update Russian Translation-Settings-CM10
+b56673b Added missing hungarian translations
+54751fe Settings: Updated italian translation
+220fe79 Settings: Added missing danish translation
+4af69db Merge "es_ES: Added translations for new features" into jellybean
+c762df2 Merge "Update Russian Translation-Settings-CM10" into jellybean
+98bdf44 Merge "PT-BR: Added Missing Translations" into jellybean
+a83ad23 Merge "Settings: Adjust available options based on screen lock picked" into jellybean
+f23a1c0 Merge "Settings: Dutch translations" into jellybean
+51a531e Merge "Settings: update german translations" into jellybean
+7ba61c6 Merge "Settings/TR: Initial commit for Turkish" into jellybean
+9a79f28 fix crash on Input method settings
+5bc82ca Merge "Settings: Updated italian translation" into jellybean
+faf926f Merge "Settings: Fix IME selector not updating when you enter IME settings" into jellybean
+8a7f423 Settings: Fix translatables
+43842c1 Added hungarian translation for clock alignment and home button answer calls settings
+6e4dfed Merge "Fixed slider shortcuts message background color in landscape" into jellybean
+10ca57e Update Russian Translation-Settings-CM10
+d075c0d Settings: Adjust available options based on screen lock picked
+119723d PT-BR: Added Missing Translations
+7f8a7a5 Settings: update german translations
+a401688 es_ES: Added translations for new features
+f8e7e32 Settings : NavigationBar Customization
+84d912b Settings: Updated italian translation
+a0d8426 Settings/TR: Initial commit for Turkish
+0b3a70f Settings: Dutch translations
+f66c78e Settings: Fix IME selector not updating when you enter IME settings
+5588a3b wifi: Allow configuration of country code for wifi
+5541808 Lockscreen: Add clock alignment (2/2)
+7724845 Updated Polish translation
+f5d5c98 Adds ability to answer call with hardware HOME button (preparation to winter time)
+f38363b Fixed slider shortcuts message background color in landscape
+4449f5c Merge "Settings: Added missing danish translations for USB Mass Storage and volume key cursor control" into jellybean
+6a05c27 Merge "Settings: Dutch translations" into jellybean
+369ca91 Merge "Settings: Updated italian translation" into jellybean
+2b4e4b5 Merge "Update Russian Translation-Settings-CM10" into jellybean
+0b1b77a french: various fixes for the last commit
+8ff810f Correct kernel version identification
+3593c82 Merge "settings: updated finnish translations" into jellybean
+9dfa9ef Merge "Hun translation: Correction of the volume_key_cursor_control direction" into jellybean
+079fa20 Settings: Dutch translations
+38cd0e1 Settings: Updated italian translation
+2cfa3df settings: updated finnish translations
+dc52586 Settings: Added missing danish translations for USB Mass Storage and volume key cursor control
+714c530 PowerWidget: Don't show mobile data options if not supported
+6351715 Hun translation: Correction of the volume_key_cursor_control direction
+3dc05f9 Merge "Added hungarian translation for mass storage mode and volume keys" into jellybean
+8b4a0e0 Merge "Settings: Simplified Chinese Translations" into jellybean
+ad0d84e Update Russian Translation-Settings-CM10
+877edb7 Added hungarian translation for mass storage mode and volume keys
+a159f13 Merge "es_ES: Added missing translations" into jellybean
+5273dc3 Settings: Simplified Chinese Translations
+f147092 es_ES: Added missing translations
+d9071aa PT-BR: Translations for Control Cursor with Volume Keys
+33b7c8e Merge "es_ES: Added missing translations" into jellybean
+288f2ba Merge "Update French translation-Settings-CM10" into jellybean
+50406d3 Settings: Option to control cursor in text fields using volume keys (2/2)
+68351c4 es_ES: Added missing translations
+50cb89f Update French translation-Settings-CM10
+50d313e Settings: Remove strings in Da & NL with no default translation
+0d01e20 Merge "PT-BR: Added Missing Translations" into jellybean
+8fd85f7 Merge "Added hungarian translation for I/O scheduler" into jellybean
+a0a4f12 Merge "German: Add missing strings and minor cleanup" into jellybean
+5513c07 Merge "Settings: Updated italian translation (I/O Scheduler + USM Switch)" into jellybean
+279e269 Add resource to disable the CM Phone IME selector method (1/2)
+31fd442 Merge "Update Russian Translation-Settings-CM10" into jellybean
+3fe21e4 Merge "Settings: Updated danish translation" into jellybean
+a823a00 Settings: Add support for variable size pattern lockscreen (Part 2/2)
+5a56709 Settings: Updated italian translation (I/O Scheduler + USM Switch)
+96d9621 German: Add missing strings and minor cleanup
+f598401 Update Russian Translation-Settings-CM10
+cb225e6 Settings: Updated danish translation
+7d62242 Add option for switching between UMS and MTP/PTP mode. (2/2)
+8dcd3d1 PT-BR: Added Missing Translations
+
+   * packages/apps/SoundRecorder
+5ff0509 restore soundrecorder interface
+
+   * packages/apps/SpareParts
+91333e3 SpareParts: Added czech translation
+8febbfe SpareParts: Added danish translation
+
+   * packages/apps/Superuser
+54ff6c9 Superuser: Added missing translations and some minor fixes
+a0c59b5 Superuser: Updated italian translation
+5a137fe Superuser: Added czech missing translation and update
+de6e595 Added hungarian translation for Superuser
+ff14c52 keep class to avoid exception
+25257e8 Fix Proguard flags
+5db5481 Bump version
+
+   * packages/apps/Torch
+807c99f Merge "Torch: Fix deprecation" into jellybean
+ec3a48d Torch: Fix deprecation
+3176c74 Torch: add support for devices with a separate sysfs entry for luminosity
+5a98e7b Modify widget to utilize AOSP power widget UI
+46c5edc Implement the ability for Torch to use the camera interface to light the camera LED.
+
+   * packages/apps/Trebuchet
+f9b5a4d Trebucher : Added missing French Translation
+9f14503 Trebucher : Added missing French Translation
+2fa6994 Update Russian Translation-Trebuchet-CM10 (typo)
+f5baac8 Merge branch 'master' of https://android.googlesource.com/platform/packages/apps/Launcher2 into aosp
+5bf25ae Merge "Trebuchet: updated romanian translation" into jellybean
+dfbe72b Fix for NPE in showAllAppsCling
+83cc923 Trebuchet: updated romanian translation
+bf387dc Fix page_hover_left_holo.9.png on all dpi
+6e09943 Trebuchet: Added czech translations
+9586053 Trebuchet: Fix preference casing
+8401ba2 Trebuchet: Only mark preferences changed when they actually are
+9d86b97 Launcher: increasing the lower bound and upperbound of loaded pages to avoid stutter in applist scroll
+a874dfa Fix shortcut intent when all homescreens are full
+dadfb1f Merge "Remove wallpaper offset" into jellybean
+b981b44 Merge branch 'jb-release' of https://android.googlesource.com/platform/packages/apps/Launcher2 into aosp
+0afbd79 Remove wallpaper offset
+b43aba1 Merge "New App Icon featuring Cid" into jellybean
+b651ffd Merge "Trebuchet/TR: Initial commit for Turkish" into jellybean
+73dfcb1 Fix shortcut intent when using less than 3 homescreens
+e798dac Merge "trebuchet: updated finnish translations" into jellybean
+e4d056a Trebuchet/TR: Initial commit for Turkish
+de00c04 Trebuchet: update romanian translation
+6cdc034 Merge "Trebuchet: Simplified Chinese Translations" into jellybean
+9459ef7 Merge "Fix for install shortcut intent" into jellybean
+c6710ce Merge "Trebuchet: Dutch translations" into jellybean
+9a20135 Trebuchet: Simplified Chinese Translations
+1daca6e Trebuchet: Updated italian translation
+2916af6 Trebuchet: Dutch translations
+0c83a5e Fix for install shortcut intent
+e312ae1 Merge "es_ES: Added missing translations" into jellybean
+ff7411e Trebuchet: Suggested minor improvements to Danish translation
+7a25caf es_ES: Added missing translations
+9164b43 Merge "Trebuchet: Fix NPE when rotating" into jellybean
+ab310e5 Trebuchet: Fix NPE when rotating
+06901f1 New App Icon featuring Cid
+
+   * packages/apps/VideoEditor
+0aa129b Use focal point for scrolling.
+863925d Use a local copy of HorizontalScrolllView.
+
+   * packages/inputmethods/LatinIME
+d53042e LatinIME:  Fix Italian strings for Auto correction settings
+c452ca4 Make keyboard hints a better visible
+d5aecce Rupee Symbol in more keys of currencies. added unicode indian rupee symbol.
+134712d LatinIME: Apply "Enable more keys for top row on tablets" (f6620308ba) and "Add "more" keys to ALL the keys" (c561f31af9) to slavik layouts.
+befa8fd Bring back productivity for QWERTZ keyboards
+95b4d7e LatinIME: Add accents to german keyboard
+5bc00e9 Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/packages/inputmethods/LatinIME into aosp-merge
+c561f31 latinime: Add "more" keys to ALL the keys
+4b58e20 Merge "LatinIME:Add Numbers to Hebrew keyboard" into jellybean
+a1f2e4a Merge "LatinIME: Add missing ukrainian letters." into jellybean
+ba0220f LatinIME:Add Numbers to Hebrew keyboard
+a090ca5 LatinIME: Add missing ukrainian letters.
+d66f1a4 Merge "nl-rBE keyboard layout" into jellybean
+20f75d2 Merge branch 'jb-release' of https://android.googlesource.com/platform/packages/inputmethods/LatinIME into aosp
+ed72e6f nl-rBE keyboard layout
+c565eeb DO NOT MERGE: Clear cache of the user dictionary when a word is added
+389b986 Android Keyboard: Updated italian translation
+70226f2 Merge "LatinIME: Missing Danish translation" into jellybean
+
+   * packages/providers/CalendarProvider
+485a184 Fix event color query (which fixes the failing CTS test).
+
+   * packages/providers/ContactsProvider
+e5cf9b3 Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/packages/providers/ContactsProvider into aosp-merge
+1a2ef0f ContactsProvider: Dutch translations
+
+   * packages/providers/MediaProvider
+5c18164 MediaScanner: Don't delete entries of secondary storage on shutdown
+
+   * prebuilt
+f6e5b79 Update ninepatch prebuilt library for the SDK. do not merge.
+
+   * prebuilts/sdk
+7337fad Add prebuilts/sdk/16/uiautomator.jar as of JZO54K  #485486
+
+   * sdk
+e552fa3 Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/sdk into aosp-merge
+
+   * system/core
+d8aa8ab Merge "charger: allow home button to wake" into jellybean
+feb666d Update tcp buffersize settings
+1323e37 charger: allow home button to wake
+1e6a58b Allow a device to define the max number of service groups in init.h
+d2c2b10 init: Allow device-specific appends to the property service permission structs
+40b7fa2 libion: Disable for omap3
+152977d Provide permission for graphics to set service.bootanim.exit prop
+943dba1 init.rc: Fix compcache and cleanup init file
+f7d3ae2 adbd:fix framebuffer handle when(fbinfo.size % 640 != 0)
+41d1bc0 Merge "toolbox/dmesg: do not hardcode KLOG_BUF_LEN" into jellybean
+dd91699 Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/system/core into aosp-merge
+e1d9986 toolbox/dmesg: do not hardcode KLOG_BUF_LEN
+f7ac9ae Add HTC Logging functions to support newer HTC props.
+22d8f16 Merge "core: Add API to retrieve mtu size" into jellybean
+38eee0f charger: make default to not suspend in charge mode
+cc3f9d1 Merge "Add RAW burst message" into jellybean
+c9d9080 Merge "Camera: Adds burst camera message type" into jellybean
+0e7ce5d Add RAW burst message
+1faaf38 Camera: Adds burst camera message type
+46495f9 rootdir: Tighten permissions on boostpulse nodes
+a17cf4c Revert "Upgrade to dlmalloc 2.8.5."
+7c9bc37 core: Add API to retrieve mtu size
+d39f524 init: Set the "ro.boot.emmc" property
+c181583 rootdir: Add terminfo path
+5d38295 Upgrade to dlmalloc 2.8.5.
+2a3f900 Merge "system/core: Add command NATIVE_WINDOW_UPDATE_BUFFERS_GEOMETRY" into jellybean
+8886cb5 Merge "charger: suspend when not animating" into jellybean
+6e9038b system/core: Add command NATIVE_WINDOW_UPDATE_BUFFERS_GEOMETRY
+ae3a615 rootdir: Update cpufreq permissions when governor changes
+673adb2 Revert "libpixelflinger: Build NEON optimized routine per target configuration"
+3d2c63d Revert "libpixelflinger: Add ARM NEON optimized scanline_t32cb16"
+590e705 init: Add support for properties expansion in exec command
+be5bb1d init: Add "export_rc" command to export env from a specified file
+3994880 Revert "window: Add API to set the min undequeued buffer count"
+097efdb Merge "include/system: JB upgrade for the MPQ8064" into jellybean
+50fa901 include/system: JB upgrade for the MPQ8064
+6479e18 Define TCP buffer sizes for HSPAP, HSDPA, HSUPA and EVDO
+
+   * system/su
+9a7bd76 avoid altering the SIGCHLD handler before execve
+
+   * system/vold
+3e61f1d UMS support with any volume, not only primary (1/3)
+42c34c8 Merge branch 'jb-mr0-release' of https://android.googlesource.com/platform/system/vold into aosp-merge
+
+   * vendor/acer
+7b1f662 Initial commit
+
+   * vendor/akm
+4a4c031 Merge pull request #4 from burnsra/jellybean
+86ed3c7 crespo: Binaries for Android 4.1.1 (JRO03R)
+
+   * vendor/asus
+fed4c06 Merge pull request #13 from dasunsrule32/jellybean
+66d75b7 remove prebuilt wifimacwriter
+88d44aa Update blobs to fit rewritten wifimacwriter
+2f68cda Merge pull request #12 from dasunsrule32/jellybean
+df92842 update blobs to 10.4.4.20
+95085e3 Update tf300tt to Asus JellyBean Blobs (finally!)
+133b217 Merge pull request #11 from dasunsrule32/jellybean
+20503d2 change to our camera hal
+d6125d0 fix cameras
+866e759 Merge pull request #10 from dasunsrule32/jellybean
+3c5a548 add updated blobs
+d8f4162 Merge pull request #9 from burnsra/JZO54K
+3135535 grouper: removal of nfc related file
+611d305 Merge pull request #7 from burnsra/jellybean
+b09cdd1 grouper: Remove specialized keystore to restore compatability with certain certificates
+37f92a8 Merge pull request #6 from burnsra/jellybean
+f46c823 grouper: Touch panel binaries moved to elan vendor for Android 4.1.1 (JRO03R)
+9c3414f grouper: GPS binaries moved to broadcom vendor for Android 4.1.1 (JRO03R)
+69445a2 Merge pull request #5 from dasunsrule32/jellybean
+fe1f827 add missing audio libs
+907ea96 add missing libqcom-ril.so
+5fbbdc6 remove additional cruft
+c8d93db add tf700t
+
+   * vendor/broadcom
+8e86499 Merge pull request #11 from TeamRogue/jellybean
+3f5512c Motorola Xoom (everest) binaries (based off wingray JRO03H)
+c9e90f9 Motorola Xoom (stingray) binaries (based off wingray JRO03H)
+bbf886e Motorola Xoom (wingray) binaries for Android 4.1.1 (JRO03H)
+1875c31 Merge pull request #10 from burnsra/jellybean
+2803434 grouper: Binaries for Android 4.1.1 (JRO03R)
+f67d022 Revert "Update maguro bin file"
+6249a6d Update maguro bin file
+
+   * vendor/cm
+551b49e cm: Integrate jenkins-generated files if present
+5394b36 cm: Add B&N NookColor (encore)
+c35e7a6 cm: Prepare for release
+3515e79 cm: Change the default sounds
+b16a30f vendor_cm: Add CMFileManagerThemes
+5d6867d cm: Update Android version in changelog
+56f3250 jerkins: enable sony msm7x30 mogami targets
+eca9dc9 update samsung maintainers
+cfe8ad3 jenkins: remove p3113 and p5113 (dedup)
+65361c1 LatinIME: Bulgarian predictive dictionary
+669746a Merge "vendor: add Xperia T maintainers" into jellybean
+7bd6121 cm: Build CMFileManager
+faa36a9 add d2mtr to build target
+83b2d81 add support for metropcs  LTE
+270b76a Add p990 to build targets
+56a66b6 cm vendor: add tf700t to jenkins-build-targets
+c1d27de apns-conf-cdma: Remove Sprint CDMA MMS apn, conflicts with LTE/eHRPD service
+8e8b477 built-targets: resort alphabetically
+8f412cb cm: init.rc: Fix compcache and cleanup init file
+b79e54f vendor: add Xperia T maintainers
+62cb5a8 cm: Add UMTS 3G Xoom (everest) to build targets
+39cb878 otatools: build-with-colors
+260d3ac Added myself as a contributor for Italian translation
+242141b cm: Add Acer A700
+67a18b3 Add Sony Xperia T to Jenkins build targets
+a58cdbc Add SGH-T769 to Jenkins build targets.
+eb99493 add skyrocket/hercules to jenkins builds
+37e05ec Merge "Added myself as contributor for Croatian translation" into jellybean
+5c7de02 Merge "Add Galaxy Note Tab 10.1 (N8000 and N8013)" into jellybean
+2526fef cm: Start bundling the updater
+83eb6b5 apns: more love for Zain JO
+d86b192 apns: update Zain JO
+df4dbfe Added myself as contributor for Croatian translation
+7d4082e Fixed the incorrect APN details for Telenet Mobile in Belgium as detailed in issue 6228.
+a2887fc apns: update MTNL settings, unified for mumbai and delhi
+37c3cea Add Galaxy Note Tab 10.1 (N8000 and N8013)
+643e71a Merge "LICENSE: update year" into jellybean
+dd36387 Add p970 to the jenkins build roster
+d74bb33 cm: Add quincytmo to nightlies
+1949eb5 cm: Build the commandline tools
+5ed21af squisher: Don't set the OTAPACKAGE name
+abfc079 cm: Compile Superuser from source
+ff61dbe LICENSE: update year
+74902fb Merge "fix for a typo in the comments of 50-cm.sh" into jellybean
+320b73e fix for a typo in the comments of 50-cm.sh
+7ec1af2 add endeavoru aka HTC One X to build targets
+ed62094 jenkins: Add n7000 to build targets
+fa2e25d apns-conf.xml: Add CSL (one2free) lte.internet APN
+f2cd15c apns-conf.xml: Add CSL (one2free) mobile APN
+fbedba0 apns-conf.xml: Add Rogers LTE APN
+9a0ce16 Add Virgin Mobile CL apn settings
+a69dc02 cm: Move wallpapers to a common_full Makefile.
+59ff680 apns-conf: EE EMT MMS apn update
+7914f33 Merge "APN: Fix GolanTelecom MMS APN" into jellybean
+ab367e3 add p1c (Samsung Galaxy Tab 7" CDMA) to build-targets
+5174188 APN: Fix GolanTelecom MMS APN
+5295aee build-targets: add p1 gsm device
+08e251a add mesmerizemtd to build targets
+0f6d1f8 cm: Add stingray and wingray to build targets
+2603cfd cm: Add epicmtd to build targets.
+2621d14 added i777, i9100 and i9300 to build targets
+efa2824 Changelog cleanup.
+
+   * vendor/elan
+04d076b grouper: Update binaries for 4.1.1(JRO03R)
+
+   * vendor/htc
+16171e8 Merge pull request #69 from kushdeck/jellybean
+086a1df jewel: update gps blobs. let common build lights.
+86ecf3d Merge pull request #68 from h8rift/jellybean
+4138104 evita: fix typo
+bdd86f8 Merge pull request #67 from h8rift/jellybean
+f65e12e Merge pull request #66 from xkonni/jellybean
+136ab48 evita: user proprietary GPS libs
+36ff918 ville: update ville-vendor-blobs to include new gps props
+6046f81 Merge pull request #65 from xkonni/jellybean
+4f1172f ville: add gps props from TMOUS 2.35.531
+7c6b8b3 Merge pull request #62 from kushdeck/jellybean
+bd4112c jewel: DO NOT MERGE - update all teh props to 2.13
+6be470f jewel: revert some of the updated radio props.
+968275a Merge pull request #61 from kushdeck/jellybean
+af6f14c jewel: update more bins and libs from 2.13. Remove libril.
+04ea27e Merge pull request #60 from h8rift/jellybean
+76dda77 evita: Update Modem FW and Radio prop libs to 2.20 RUU
+705fed7 Merge pull request #58 from intervigilium/jellybean
+f4294b9 ville: update modem firmware from TMOUS 2.35.531
+c842df6 jewel: add modem, q6 firmware from 2.13.651
+67ae717 evita: add modem, q6 firmware from 2.20.502
+1d92f25 ville: add modem, q6 firmware from 2.31.405
+3e0fe19 Merge pull request #57 from intervigilium/jellybean
+cf968b0 ville: re-add missing gps lib
+92387ea Merge pull request #56 from intervigilium/jellybean
+de11745 ville: update proprietary files from ville 2.31.405
+07d70dd ville: remove unused proprietary files
+19f9559 ville: re-add GPS props
+aba56b6 Merge pull request #54 from kushdeck/jellybean
+7db9bd5 Merge pull request #55 from h8rift/jellybean
+2b26c08 evita: update props to AT&T 2.20 RUU libs
+94491e9 Jewel: update camera, sensor, and audio props from 2.13 RUU.
+32705f7 Merge pull request #53 from intervigilium/jellybean
+76ab8b5 jewel: add wcnss firmware from Xperia T at M8960AAAAANAZW153614
+446da10 evita: add wcnss firmware from Xperia T at M8960AAAAANAZW153614
+12090e6 ville: import wcnss firmware from Xperia T at M8960AAAAANAZW153614
+57efe49 jewel: remove unused prop libs
+fcc9b14 jewel: remove unused prop libs
+5f5dc0f Merge pull request #52 from intervigilium/jellybean
+7b0ca54 jewel: add wcnss/wlan props from Sprint 1.13
+e1522be evita: add prima/wcnss props from ATT 1.73
+ff38d04 ville: add prima/wcnss props from TMOUS 1.84
+2a4bd68 ville: use liboemcamera from 1.78.405 RUU
+0ab1903 Merge pull request #51 from TeamNDVRu/jellybean
+3223881 Adding endeavoru jellybean blobs to vendor part.
+e82d746 Merge pull request #50 from kushdeck/jellybean
+acf987f jewel: remove unused props, use prop lights to fix notification LED
+e3e564a Merge pull request #49 from intervigilium/jellybean
+c9992a8 msm8960: build camera HAL from source
+
+   * vendor/imgtec
+537d9c2 Merge pull request #13 from burnsra/jellybean
+c444b32 crespo: Remove incorrectly added file
+
+   * vendor/lge
+0fbde37 p990: Updated audio HAL
+81169b3 p990: Switch radio libraries again
+f1921d5 Remove props for devices without support beyond gingerbread
+20499c2 p990: Rename radio library
+6a02a9e p990: Add speexrate blob
+a4347c3 p990: Refresh blobs
+fd1a138 p990: Updated blobs for ICS
+5c01398 p970: Remove OMX and DSP blobs
+078c450 p970: Updated audio blob
+0a379fd p970: Switch MPL implementation
+8f0a92f Updated B-Proj props for ICS
+61e270f Merge branch 'jellybean' of github.com:TheMuppets/proprietary_vendor_lge into jellybean
+52c381a p930: Updated camera blob
+
+   * vendor/motorola
+0563220 everest: Bring more in line with stingray
+9abcd37 wingray: Updated files from JZO54K
+fbdc159 everest: Add widevine stuff
+a582009 stingray: Add widevine stuff
+ee84575 wingray: Add widevine stuff
+2c8addb everest: Clean up props
+e3de354 everest: Reorganize files
+0931f0b stingray: Reorganize files
+fee4c8f wingray: Reorganize files
+1244945 everest: Updated files from JRO03H OTA (wingray)
+bb05ad3 everest: Go back to Honeycomb RIL for now
+9ec50a3 everest: Vendor files from Telstra MZ601 (I.7.1-42)
+
+   * vendor/nvidia
+865d512 Merge pull request #2 from TeamRogue/jellybean
+1c1f80e Motorola Xoom (everest) binaries (based off wingray JRO03H)
+fea962d Motorola Xoom (stingray) binaries (based off wingray JRO03H)
+2972d03 Motorola Xoom (wingray) binaries for Android 4.1.1 (JRO03H)
+462b70a Merge pull request #1 from burnsra/JZO54K
+cf7a537 Binaries for Android 4.1.2 (JZO54K)
+
+   * vendor/nxp
+1085551 Merge pull request #6 from burnsra/JZO54K
+f098423 grouper: addition of nfc related files
+
+   * vendor/samsung
+59098d2 vibrantmtd: update gps.conf again
+9e39dfc vibrantmtd: update gps conf
+d7519e0 d710: props
+e363457 Merge pull request #147 from alanorth/smdk4210-tabs
+5b48729 Merge pull request #148 from invisiblek/jellybean
+99f2b55 d710: open source akm
+41d4b34 d2vzw: update nfc props from VRBLI5
+b51f651 smdk4210-tab: Remove prebuilt sec_keyboard binary
+8fb53de smdk4210-tab: Use opensource macloader
+3fec812 d710:Use common drm files
+ac78248 d2mtr: add ril support
+024c9fd Merge branch 'jellybean' of github.com:TheMuppets/proprietary_vendor_samsung into jellybean
+d48908b Add d2mtr
+c6f40f2 hercules/quincy: relocate libpn544_fw.so to hardcoded path.
+2c34a9c d2:add dependancy blob
+5b6da21 d2 jbtest: add missing blob
+a60b773 d2: use current jb driver
+7222a84  fix linking issue
+fb0d372 d2spr: add jb blobs to a test folder
+df67587 d710: Update makefile
+736668d d2:add dependancy blob
+fd352e2 d2 jbtest: add missing blob
+e6f8693 d2: use current jb driver
+d1fb104  fix linking issue
+0b65f9a Merge branch 'jellybean' of github.com:TheMuppets/proprietary_vendor_samsung into jellybean
+914fb4e d2spr: add jb blobs to a test folder
+993f02a d710: prop changes
+c877a28 d710: Remove broken audio props
+6c7abbf d710: rename props
+658f55b Relocate skyrocket's libpn544_fw.so to hardcoded path. See packages/apps/Nfc/src/com/android/nfc/nxp/NativeNfcManager.java:39
+5ff8b76 Revert "Update audio blobs to JB"
+f959b4f Update audio blobs to JB
+f7056e1 d710: updating to jb props d710: change wimax jar
+12f3acc Merge pull request #141 from jt1134/jellybean
+9eac039 fascinatemtd/mesmerizemtd: cleanup gps.conf
+458a7a6 d710: fixing props
+74bed2d i9300: downgrade wifi blobs to LG8
+266eefd mesmerizemtd: update RIL blobs (fixes roaming issues)
+63713e8 d710: reset props to FG31
+da63e39 d710: update
+2211a19 d710: prop changes
+43a3768 d710: fix mk file
+55b4ae4 permissions
+5482398 d710 reset to fh13 props
+b28dbca d2-common: update blobs to LIH update
+9160368 Merge branch 'jellybean' of github.com:TheMuppets/proprietary_vendor_samsung into jellybean
+a8e5855 d2-common: update blobs to li3. d2spr: update ril daemon blob to li3
+48a770d Change Props
+b64dbe2 more props
+975e5f7 add libs
+490579c update props
+0214bf1 Merge pull request #138 from burnsra/JZO54K
+4518e59 toro: Revert lib_gsd4t.so to prevent crash
+56e7416 toroplus: Revert to HiddenMenu
+aa17fdb Merge pull request #137 from burnsra/JZO54K
+991e37d Merge pull request #125 from TuckJ/jellybean
+a7b8053 Binaries for Android 4.1.2 (JZO54K)
+e57e893 Merge pull request #133 from UberPinguin/jellybean
+a63e9a2 Add macloader for t769.
+497e15c Merge pull request #132 from UberPinguin/jellybean
+8e689fc Files for Blaze 4G / SGH-T769.
+84b6d77 Update d710/d710-vendor-blobs.mk
+d93ebab Update d710/d710-vendor-blobs.mk
+ce60a7b Merge pull request #128 from techomancer/jellybean
+6bbc767 Merge pull request #131 from xplodwild/jellybean
+65142dd i9300: Add back hostapd as a temporary workaround for tethering
+ea372ee Merge branch 'jellybean' of git://github.com/TheMuppets/proprietary_vendor_samsung into jellybean
+cb028f3 Merge pull request #129 from bbelos/jellybean
+00fe822 epicmtd: Modify SprintMenu for uart switch path.
+6c839f4 add sec_keyboard keyboard daemon
+1e1d40f Merge pull request #127 from espenfjo/r3p0
+8723e0f Remove libsync dependencies
+984d15d Merge branch 'r3p0' of git://github.com/ohanar/proprietary_vendor_samsung into r3p0
+8ee172e Update with mali r3p0 libraries
+e1aa64a Update with mali r3p0 libraries
+9132f3f Allow r760 to pull.
+f24bb70 Merge pull request #123 from fitsnugly/jellybean
+41d7d2a toro: fix libsec-ril_lte.so derp
+044ded3 Merge pull request #120 from fitsnugly/jellybean
+be6f9f0 Merge pull request #122 from espenfjo/jellybean
+aba1f36 Revert "Update with mali r3p0 libraries"
+75db431 Merge pull request #121 from espenfjo/jellybean
+d2d4803 Update with mali r3p0 libraries
+e9ad711 Fix cbd/rild derp
+b20e836 i9300/n80xx: libsync is opensource
+85bdb76 Merge pull request #117 from burnsra/jellybean
+1428342 toro: Update binaries to latest OTA (JRO03O)
+d03f1cb crespo4g: Removal of unnecessary files as of Android 4.1.1 (JRO03R)
+17054f6 msm8660: Update blobs
+599379c Merge pull request #116 from espenfjo/5395de2cc49c147b4362fe6c79afbb21bfe0791c
+61ff81a Merge pull request #115 from burnsra/jellybean
+12adbc9 toroplus: Update binaries to latest OTA (JRO03U)
+5395de2 Add Note 10.1 n80xx blobs
+0107b39 Merge pull request #114 from pawitp/jellybean
+362cbb4 aries-common: Remove no longer used proprietary lpm binaries
+7a0471a galaxys2-common: remove legacy hostapd
+b8ff51e i9300: remove legacy hostapd
+0140d73 i9300: update blobs to LI8, except NFC firmware
+0c027a6 i9100g: fix typo
+6f043fb i9300: back to LG8 gps
+5c17973 i9300: blobs from LH4 (mali r3p0)
+fcb49b2 p31xx/p51xx: added dock keyboard service
+deac1d4 P5 blobs
+2a1139d quincy: Update blobs
+c8b985a msm8660: Update props
+7190545 p31xx: variant specific sensor module
+1745af9 Merge pull request #112 from jt1134/jellybean
+853a502 mesmerizemtd: update ril blobs from EH09
+8eeaa57 Merge pull request #111 from bbelos/jellybean
+0059dc8 epicmtd: Modified charging_mode binary for 3.0 kernel.
+e3c2cdf msm8660: Update blobs
+7433cc6 Merge pull request #110 from jt1134/jellybean
+edd3384 mesmerizemtd: remove files unneeded for jellybean
+3bf098d d2: fix nfc on d2vzw board family
+cf223e5 Merge pull request #109 from sbrissen/jellybean
+1ec82b1 gs2-common: copy hwcomposer
+fd7465e d710: fix using common props
+f2de021 Merge pull request #108 from sbrissen/jellybean
+199e87f d710: make use off galaxys2-common
+dbacabe path change
+5f1a21c Merge pull request #106 from sbrissen/jellybean
+b3f7f25 d710: fix headers
+97da544 d710: update props for jb
+fa346ab renamed to d710 as per other SGSII variants
+
+   * vendor/sony
+60d71dc blue: drop illumination blob
+dcb36a9 sony: update libqc-opt
+162b14c mint: revert wifi firmware update
+e012f28 sony: remove qcom network optimizations plugins
+d97420f fuji: adreno C2D2 update
+65a2bb2 aoba/hikari: ion enabled acdbloader
+8089b76 fuji: add aoba device
+fa44461 fuji: new dep blobs
+ea103d1 fuji: blob update and cleanup
+5138bd1 fuji: add NFC blob
+d5b7d56 mint: updated blob from 7.0.A.3.195
+b39e210 sony: update blob
+acd8281 hikari: updated blob from 6.1.A.2.50
+e7fd716 hayabusa: initial blob import
+8a18e91 mint: update blob
+0705a28 hikari: update blob
+50092ac mint: haxed camera blob
+5f05098 nozomi: updated blob from 6.1.A.2.50
+59e40f3 mint: idd remove
+d48b0b1 mint: add fm blobs
+0a6b7ca mint: qcom networking optimizations plugins 2
+06d18c3 mint: qcom networking optimizations plugin
+8dc89e7 mint: add color-convertor lib
+bd6f1e5 somc: add tapioca blob
+2784d42 blue: BT fix
+f8c170f mint: alsa config moved to device folder
+55fa603 mint: add qc perf lib
+a1a9775 sony: update wlan props
+6908e7e mint: add missing system_monitor blob
+879b3fc mint: more blobs
+edbe06c mint: update blob
+5f91661 mint: more blob
+7db07a6 mint: vendor blobs
+9e03d0d fuji: add RPM to common
+afbdea1 hikari: fix prop list
+8e63685 sony: ant+ props
+9b9b15c fuji: update blobs
+
+   * vendor/tmobile/apps/ThemeChooser
+ceb6293 ThemeChooser: Simplified Chinese Translations
+d545864 ThemeChooser: romanian translation
+
+   * vendor/tmobile/providers/ThemeManager
+5e4ebc5 ThemeManager: Simplified Chinese Translations
+e5d5695 ThemeManager: Dutch translations
+
+   * vendor/widevine
+0fc3019 Merge pull request #3 from TeamRogue/jellybean
+1183155 Motorola Xoom (everest) binaries for Android 4.1.1
+7eb2c04 Motorola Xoom (stingray) binaries for Android 4.1.1
+6b8ebf2 Motorola Xoom (wingray) binaries for Android 4.1.1
+7f4ecb1 Merge pull request #2 from burnsra/JZO54K
+a7e9a26 Binaries for Android 4.1.2 (JZO54K)
+
